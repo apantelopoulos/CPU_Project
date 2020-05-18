@@ -1,0 +1,57 @@
+|StateMachine
+FETCH <= out:inst3.FETCH
+CLK => DFF3:inst.CLK
+E => nxt:inst2.E
+E2 => nxt:inst2.E2
+EXEC1 <= out:inst3.EXEC1
+EXEC2 <= out:inst3.EXEC2
+EXEC3 <= out:inst3.EXEC3
+
+
+|StateMachine|out:inst3
+S[0] => EXEC1.IN1
+S[0] => EXEC3.IN1
+S[0] => FETCH.IN1
+S[0] => EXEC2.IN1
+S[1] => EXEC2.IN0
+S[1] => FETCH.IN0
+S[2] => FETCH.IN1
+S[2] => EXEC2.IN1
+FETCH <= FETCH.DB_MAX_OUTPUT_PORT_TYPE
+EXEC1 <= EXEC1.DB_MAX_OUTPUT_PORT_TYPE
+EXEC2 <= EXEC2.DB_MAX_OUTPUT_PORT_TYPE
+EXEC3 <= EXEC3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StateMachine|DFF3:inst
+Q[0] <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+RSTn => inst1.ACLR
+RSTn => inst2.ACLR
+RSTn => inst3.ACLR
+CLK => inst1.CLK
+CLK => inst2.CLK
+CLK => inst3.CLK
+D[0] => inst3.DATAIN
+D[1] => inst2.DATAIN
+D[2] => inst1.DATAIN
+
+
+|StateMachine|nxt:inst2
+S[0] => NS.IN1
+S[0] => NS.IN1
+S[0] => NS.IN0
+S[1] => NS.IN0
+S[1] => NS.IN0
+S[1] => NS.IN1
+S[2] => NS.IN1
+S[2] => NS.IN1
+S[2] => NS.IN1
+E => NS.IN1
+E2 => NS.IN1
+NS[0] <= NS.DB_MAX_OUTPUT_PORT_TYPE
+NS[1] <= NS.DB_MAX_OUTPUT_PORT_TYPE
+NS[2] <= <GND>
+
+

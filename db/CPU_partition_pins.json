@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "FETCH",
+					"strict" : false
+				},
+				{
+					"name" : "EXEC1",
+					"strict" : false
+				},
+				{
+					"name" : "EXEC2",
+					"strict" : false
+				},
+				{
+					"name" : "EXEC3",
+					"strict" : false
+				},
+				{
+					"name" : "E",
+					"strict" : false
+				},
+				{
+					"name" : "E2",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
