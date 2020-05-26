@@ -1,0 +1,9 @@
+module sxtn2twlv
+(
+input [15:0] in,
+output [11:0] out
+);
+
+assign out = [11:0] in;
+
+endmodule

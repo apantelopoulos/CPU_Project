@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CGXFC7C7F23C8
-set_global_assignment -name TOP_LEVEL_ENTITY StateMachine
+set_global_assignment -name TOP_LEVEL_ENTITY Registers
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 19.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:57:44  MAY 18, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION "19.1.0 Lite Edition"
@@ -55,4 +55,15 @@ set_global_assignment -name BDF_FILE StateMachine.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name BDF_FILE Registers.bdf
+set_global_assignment -name VERILOG_FILE 4input_bus_mux.v
+set_global_assignment -name VERILOG_FILE 4input_mux.v
+set_global_assignment -name VERILOG_FILE WriteEnableDecoder.v
+set_global_assignment -name VERILOG_FILE alu.v
+set_global_assignment -name BDF_FILE top.bdf
+set_global_assignment -name VERILOG_FILE twlv2sxtn.v
+set_global_assignment -name VERILOG_FILE sxtn2lvn.v
+set_global_assignment -name VERILOG_FILE lvn2sxtn.v
+set_global_assignment -name VERILOG_FILE equal.v
+set_global_assignment -name VERILOG_FILE zero.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

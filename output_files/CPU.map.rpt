@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Mon May 18 17:10:33 2020
+Tue May 26 03:08:12 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -10,14 +10,7 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -41,27 +34,22 @@ https://fpgasoftware.intel.com/eula.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon May 18 17:10:33 2020       ;
-; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
-; Revision Name                   ; CPU                                         ;
-; Top-level Entity Name           ; StateMachine                                ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2                                           ;
-; Total pins                      ; 7                                           ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Failed - Tue May 26 03:08:12 2020           ;
+; Quartus Prime Version       ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
+; Revision Name               ; CPU                                         ;
+; Top-level Entity Name       ; Registers                                   ;
+; Family                      ; Cyclone V                                   ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -70,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; StateMachine       ; CPU                ;
+; Top-level entity name                                                           ; Registers          ; CPU                ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -160,118 +148,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                  ; Library ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------+---------+
-; nxt.v                            ; yes             ; User Verilog HDL File                    ; C:/Users/UserPC/Documents/GitHub/CPU_Project/nxt.v            ;         ;
-; out.v                            ; yes             ; User Verilog HDL File                    ; C:/Users/UserPC/Documents/GitHub/CPU_Project/out.v            ;         ;
-; StateMachine.bdf                 ; yes             ; User Block Diagram/Schematic File        ; C:/Users/UserPC/Documents/GitHub/CPU_Project/StateMachine.bdf ;         ;
-; dff3.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/UserPC/Documents/GitHub/CPU_Project/dff3.bdf         ;         ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimate of Logic utilization (ALMs needed) ; 0               ;
-;                                             ;                 ;
-; Combinational ALUT usage for logic          ; 6               ;
-;     -- 7 input functions                    ; 0               ;
-;     -- 6 input functions                    ; 0               ;
-;     -- 5 input functions                    ; 0               ;
-;     -- 4 input functions                    ; 1               ;
-;     -- <=3 input functions                  ; 5               ;
-;                                             ;                 ;
-; Dedicated logic registers                   ; 2               ;
-;                                             ;                 ;
-; I/O pins                                    ; 7               ;
-;                                             ;                 ;
-; Total DSP Blocks                            ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; DFF3:inst|inst2 ;
-; Maximum fan-out                             ; 6               ;
-; Total fan-out                               ; 30              ;
-; Average fan-out                             ; 1.36            ;
-+---------------------------------------------+-----------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+--------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name     ; Entity Name  ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+--------------+--------------+
-; |StateMachine              ; 6 (0)               ; 2 (0)                     ; 0                 ; 0          ; 7    ; 0            ; |StateMachine           ; StateMachine ; work         ;
-;    |DFF3:inst|             ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |StateMachine|DFF3:inst ; DFF3         ; work         ;
-;    |nxt:inst2|             ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |StateMachine|nxt:inst2 ; nxt          ; work         ;
-;    |out:inst3|             ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |StateMachine|out:inst3 ; out          ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------+--------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; DFF3:inst|inst1                       ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 2     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 2                           ;
-;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 7                           ;
-;     normal            ; 7                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 1                           ;
-; boundary_port         ; 7                           ;
-;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.25                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -280,43 +161,51 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Mon May 18 17:10:21 2020
+    Info: Processing started: Tue May 26 03:07:59 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ramdata.v
-    Info (12023): Found entity 1: RAMdata File: C:/Users/UserPC/Documents/GitHub/CPU_Project/RAMdata.v Line: 40
+    Info (12023): Found entity 1: RAMdata File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/RAMdata.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file rominstructions.v
-    Info (12023): Found entity 1: ROMinstructions File: C:/Users/UserPC/Documents/GitHub/CPU_Project/ROMinstructions.v Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
-    Info (12023): Found entity 1: decoder File: C:/Users/UserPC/Documents/GitHub/CPU_Project/decoder.v Line: 1
+    Info (12023): Found entity 1: ROMinstructions File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ROMinstructions.v Line: 40
+Error (10170): Verilog HDL syntax error at decoder.v(5) near text: "input";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/decoder.v Line: 5
+Error (10170): Verilog HDL syntax error at decoder.v(41) near text: "assign";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/decoder.v Line: 41
+Error (10112): Ignored design unit "decoder" at decoder.v(1) due to previous errors File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/decoder.v Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file decoder.v
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.bdf
     Info (12023): Found entity 1: CPU
 Info (12021): Found 1 design units, including 1 entities, in source file nxt.v
-    Info (12023): Found entity 1: nxt File: C:/Users/UserPC/Documents/GitHub/CPU_Project/nxt.v Line: 1
+    Info (12023): Found entity 1: nxt File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/nxt.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file out.v
-    Info (12023): Found entity 1: out File: C:/Users/UserPC/Documents/GitHub/CPU_Project/out.v Line: 1
+    Info (12023): Found entity 1: out File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/out.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file statemachine.bdf
     Info (12023): Found entity 1: StateMachine
-Info (12127): Elaborating entity "StateMachine" for the top level hierarchy
-Warning (275011): Block or symbol "nxt" of instance "inst2" overlaps another block or symbol
-Warning (275011): Block or symbol "VCC" of instance "inst4" overlaps another block or symbol
-Info (12128): Elaborating entity "out" for hierarchy "out:inst3"
-Warning (12125): Using design file dff3.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: DFF3
-Info (12128): Elaborating entity "DFF3" for hierarchy "DFF3:inst"
-Info (12128): Elaborating entity "nxt" for hierarchy "nxt:inst2"
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 13 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 6 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4836 megabytes
-    Info: Processing ended: Mon May 18 17:10:33 2020
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:22
+Info (12021): Found 1 design units, including 1 entities, in source file registers.bdf
+    Info (12023): Found entity 1: Registers
+Info (12021): Found 1 design units, including 1 entities, in source file 4input_bus_mux.v
+    Info (12023): Found entity 1: fourinputbusmux File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/4input_bus_mux.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file 4input_mux.v
+    Info (12023): Found entity 1: fourinputmux File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/4input_mux.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file writeenabledecoder.v
+    Info (12023): Found entity 1: writeenabledecoder File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/WriteEnableDecoder.v Line: 1
+Error (10170): Verilog HDL syntax error at alu.v(17) near text: "[";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 17
+Error (10170): Verilog HDL syntax error at alu.v(18) near text: "[";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 18
+Error (10170): Verilog HDL syntax error at alu.v(19) near text: "[";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 19
+Error (10170): Verilog HDL syntax error at alu.v(20) near text: "[";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 20
+Error (10759): Verilog HDL error at alu.v(21): object carryen declared in a list of port declarations cannot be redeclared within the module body File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 21
+Error (10171): Verilog HDL syntax error at alu.v(38) near end of file ;  expecting "endmodule" File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 38
+Info (12021): Found 0 design units, including 0 entities, in source file alu.v
+Info (12021): Found 1 design units, including 1 entities, in source file top.bdf
+    Info (12023): Found entity 1: top
+Info (12021): Found 1 design units, including 1 entities, in source file twlv2sxtn.v
+    Info (12023): Found entity 1: sxtn2twlv File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/twlv2sxtn.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file sxtn2lvn.v
+    Info (12023): Found entity 1: sxtn2lvn File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/sxtn2lvn.v Line: 1
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 9 errors, 1 warning
+    Error: Peak virtual memory: 4772 megabytes
+    Error: Processing ended: Tue May 26 03:08:12 2020
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:19
 
 
