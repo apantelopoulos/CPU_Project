@@ -115,6 +115,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "Dout[15..0]" (rect 112 107 179 126)(font "Intel Clear" (font_size 8)))
 		(line (pt 200 112)(pt 184 112)(line_width 3))
 	)
+	(port
+		(pt 200 128)
+		(output)
+		(text "CROUT" (rect 0 0 43 19)(font "Intel Clear" (font_size 8)))
+		(text "CROUT" (rect 136 123 179 142)(font "Intel Clear" (font_size 8)))
+		(line (pt 200 128)(pt 184 128))
+	)
 	(drawing
 		(rectangle (rect 16 16 184 144))
 	)

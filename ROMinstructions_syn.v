@@ -34,7 +34,7 @@
 //https://fpgasoftware.intel.com/eula.
 
 
-//altsyncram ADDRESS_ACLR_A="NONE" CLOCK_ENABLE_INPUT_A="BYPASS" CLOCK_ENABLE_OUTPUT_A="BYPASS" DEVICE_FAMILY="Cyclone V" ENABLE_RUNTIME_MOD="NO" INIT_FILE="fibonacci.mif" NUMWORDS_A=2048 OPERATION_MODE="ROM" OUTDATA_ACLR_A="NONE" OUTDATA_REG_A="CLOCK0" WIDTH_A=16 WIDTH_BYTEENA_A=1 WIDTHAD_A=11 address_a clock0 q_a rden_a
+//altsyncram ADDRESS_ACLR_A="NONE" CLOCK_ENABLE_INPUT_A="BYPASS" CLOCK_ENABLE_OUTPUT_A="BYPASS" DEVICE_FAMILY="Cyclone V" ENABLE_RUNTIME_MOD="NO" INIT_FILE="fibonacci.mif" NUMWORDS_A=2048 OPERATION_MODE="ROM" OUTDATA_ACLR_A="NONE" OUTDATA_REG_A="UNREGISTERED" WIDTH_A=16 WIDTH_BYTEENA_A=1 WIDTHAD_A=11 address_a clock0 q_a rden_a
 //VERSION_BEGIN 19.1 cbx_altera_syncram_nd_impl 2019:09:22:11:00:28:SJ cbx_altsyncram 2019:09:22:11:00:28:SJ cbx_cycloneii 2019:09:22:11:00:28:SJ cbx_lpm_add_sub 2019:09:22:11:00:28:SJ cbx_lpm_compare 2019:09:22:11:00:28:SJ cbx_lpm_decode 2019:09:22:11:00:28:SJ cbx_lpm_mux 2019:09:22:11:00:28:SJ cbx_mgl 2019:09:22:11:02:15:SJ cbx_nadder 2019:09:22:11:00:28:SJ cbx_stratix 2019:09:22:11:00:28:SJ cbx_stratixii 2019:09:22:11:00:28:SJ cbx_stratixiii 2019:09:22:11:00:28:SJ cbx_stratixv 2019:09:22:11:00:28:SJ cbx_util_mgl 2019:09:22:11:00:28:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
@@ -125,7 +125,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_0.clk0_core_clock_enable = "ena0",
 		ram_block1a_0.clk0_input_clock_enable = "none",
-		ram_block1a_0.clk0_output_clock_enable = "none",
 		ram_block1a_0.connectivity_checking = "OFF",
 		ram_block1a_0.init_file = "fibonacci.mif",
 		ram_block1a_0.init_file_layout = "port_a",
@@ -135,7 +134,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_0.port_a_address_clear = "none",
 		ram_block1a_0.port_a_address_width = 11,
 		ram_block1a_0.port_a_data_out_clear = "none",
-		ram_block1a_0.port_a_data_out_clock = "clock0",
+		ram_block1a_0.port_a_data_out_clock = "none",
 		ram_block1a_0.port_a_data_width = 1,
 		ram_block1a_0.port_a_first_address = 0,
 		ram_block1a_0.port_a_first_bit_number = 0,
@@ -187,7 +186,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_1.clk0_core_clock_enable = "ena0",
 		ram_block1a_1.clk0_input_clock_enable = "none",
-		ram_block1a_1.clk0_output_clock_enable = "none",
 		ram_block1a_1.connectivity_checking = "OFF",
 		ram_block1a_1.init_file = "fibonacci.mif",
 		ram_block1a_1.init_file_layout = "port_a",
@@ -197,7 +195,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_1.port_a_address_clear = "none",
 		ram_block1a_1.port_a_address_width = 11,
 		ram_block1a_1.port_a_data_out_clear = "none",
-		ram_block1a_1.port_a_data_out_clock = "clock0",
+		ram_block1a_1.port_a_data_out_clock = "none",
 		ram_block1a_1.port_a_data_width = 1,
 		ram_block1a_1.port_a_first_address = 0,
 		ram_block1a_1.port_a_first_bit_number = 1,
@@ -249,7 +247,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_2.clk0_core_clock_enable = "ena0",
 		ram_block1a_2.clk0_input_clock_enable = "none",
-		ram_block1a_2.clk0_output_clock_enable = "none",
 		ram_block1a_2.connectivity_checking = "OFF",
 		ram_block1a_2.init_file = "fibonacci.mif",
 		ram_block1a_2.init_file_layout = "port_a",
@@ -259,7 +256,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_2.port_a_address_clear = "none",
 		ram_block1a_2.port_a_address_width = 11,
 		ram_block1a_2.port_a_data_out_clear = "none",
-		ram_block1a_2.port_a_data_out_clock = "clock0",
+		ram_block1a_2.port_a_data_out_clock = "none",
 		ram_block1a_2.port_a_data_width = 1,
 		ram_block1a_2.port_a_first_address = 0,
 		ram_block1a_2.port_a_first_bit_number = 2,
@@ -311,7 +308,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_3.clk0_core_clock_enable = "ena0",
 		ram_block1a_3.clk0_input_clock_enable = "none",
-		ram_block1a_3.clk0_output_clock_enable = "none",
 		ram_block1a_3.connectivity_checking = "OFF",
 		ram_block1a_3.init_file = "fibonacci.mif",
 		ram_block1a_3.init_file_layout = "port_a",
@@ -321,7 +317,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_3.port_a_address_clear = "none",
 		ram_block1a_3.port_a_address_width = 11,
 		ram_block1a_3.port_a_data_out_clear = "none",
-		ram_block1a_3.port_a_data_out_clock = "clock0",
+		ram_block1a_3.port_a_data_out_clock = "none",
 		ram_block1a_3.port_a_data_width = 1,
 		ram_block1a_3.port_a_first_address = 0,
 		ram_block1a_3.port_a_first_bit_number = 3,
@@ -373,7 +369,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_4.clk0_core_clock_enable = "ena0",
 		ram_block1a_4.clk0_input_clock_enable = "none",
-		ram_block1a_4.clk0_output_clock_enable = "none",
 		ram_block1a_4.connectivity_checking = "OFF",
 		ram_block1a_4.init_file = "fibonacci.mif",
 		ram_block1a_4.init_file_layout = "port_a",
@@ -383,7 +378,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_4.port_a_address_clear = "none",
 		ram_block1a_4.port_a_address_width = 11,
 		ram_block1a_4.port_a_data_out_clear = "none",
-		ram_block1a_4.port_a_data_out_clock = "clock0",
+		ram_block1a_4.port_a_data_out_clock = "none",
 		ram_block1a_4.port_a_data_width = 1,
 		ram_block1a_4.port_a_first_address = 0,
 		ram_block1a_4.port_a_first_bit_number = 4,
@@ -435,7 +430,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_5.clk0_core_clock_enable = "ena0",
 		ram_block1a_5.clk0_input_clock_enable = "none",
-		ram_block1a_5.clk0_output_clock_enable = "none",
 		ram_block1a_5.connectivity_checking = "OFF",
 		ram_block1a_5.init_file = "fibonacci.mif",
 		ram_block1a_5.init_file_layout = "port_a",
@@ -445,7 +439,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_5.port_a_address_clear = "none",
 		ram_block1a_5.port_a_address_width = 11,
 		ram_block1a_5.port_a_data_out_clear = "none",
-		ram_block1a_5.port_a_data_out_clock = "clock0",
+		ram_block1a_5.port_a_data_out_clock = "none",
 		ram_block1a_5.port_a_data_width = 1,
 		ram_block1a_5.port_a_first_address = 0,
 		ram_block1a_5.port_a_first_bit_number = 5,
@@ -497,7 +491,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_6.clk0_core_clock_enable = "ena0",
 		ram_block1a_6.clk0_input_clock_enable = "none",
-		ram_block1a_6.clk0_output_clock_enable = "none",
 		ram_block1a_6.connectivity_checking = "OFF",
 		ram_block1a_6.init_file = "fibonacci.mif",
 		ram_block1a_6.init_file_layout = "port_a",
@@ -507,7 +500,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_6.port_a_address_clear = "none",
 		ram_block1a_6.port_a_address_width = 11,
 		ram_block1a_6.port_a_data_out_clear = "none",
-		ram_block1a_6.port_a_data_out_clock = "clock0",
+		ram_block1a_6.port_a_data_out_clock = "none",
 		ram_block1a_6.port_a_data_width = 1,
 		ram_block1a_6.port_a_first_address = 0,
 		ram_block1a_6.port_a_first_bit_number = 6,
@@ -559,7 +552,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_7.clk0_core_clock_enable = "ena0",
 		ram_block1a_7.clk0_input_clock_enable = "none",
-		ram_block1a_7.clk0_output_clock_enable = "none",
 		ram_block1a_7.connectivity_checking = "OFF",
 		ram_block1a_7.init_file = "fibonacci.mif",
 		ram_block1a_7.init_file_layout = "port_a",
@@ -569,7 +561,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_7.port_a_address_clear = "none",
 		ram_block1a_7.port_a_address_width = 11,
 		ram_block1a_7.port_a_data_out_clear = "none",
-		ram_block1a_7.port_a_data_out_clock = "clock0",
+		ram_block1a_7.port_a_data_out_clock = "none",
 		ram_block1a_7.port_a_data_width = 1,
 		ram_block1a_7.port_a_first_address = 0,
 		ram_block1a_7.port_a_first_bit_number = 7,
@@ -621,7 +613,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_8.clk0_core_clock_enable = "ena0",
 		ram_block1a_8.clk0_input_clock_enable = "none",
-		ram_block1a_8.clk0_output_clock_enable = "none",
 		ram_block1a_8.connectivity_checking = "OFF",
 		ram_block1a_8.init_file = "fibonacci.mif",
 		ram_block1a_8.init_file_layout = "port_a",
@@ -631,7 +622,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_8.port_a_address_clear = "none",
 		ram_block1a_8.port_a_address_width = 11,
 		ram_block1a_8.port_a_data_out_clear = "none",
-		ram_block1a_8.port_a_data_out_clock = "clock0",
+		ram_block1a_8.port_a_data_out_clock = "none",
 		ram_block1a_8.port_a_data_width = 1,
 		ram_block1a_8.port_a_first_address = 0,
 		ram_block1a_8.port_a_first_bit_number = 8,
@@ -683,7 +674,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_9.clk0_core_clock_enable = "ena0",
 		ram_block1a_9.clk0_input_clock_enable = "none",
-		ram_block1a_9.clk0_output_clock_enable = "none",
 		ram_block1a_9.connectivity_checking = "OFF",
 		ram_block1a_9.init_file = "fibonacci.mif",
 		ram_block1a_9.init_file_layout = "port_a",
@@ -693,7 +683,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_9.port_a_address_clear = "none",
 		ram_block1a_9.port_a_address_width = 11,
 		ram_block1a_9.port_a_data_out_clear = "none",
-		ram_block1a_9.port_a_data_out_clock = "clock0",
+		ram_block1a_9.port_a_data_out_clock = "none",
 		ram_block1a_9.port_a_data_width = 1,
 		ram_block1a_9.port_a_first_address = 0,
 		ram_block1a_9.port_a_first_bit_number = 9,
@@ -745,7 +735,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_10.clk0_core_clock_enable = "ena0",
 		ram_block1a_10.clk0_input_clock_enable = "none",
-		ram_block1a_10.clk0_output_clock_enable = "none",
 		ram_block1a_10.connectivity_checking = "OFF",
 		ram_block1a_10.init_file = "fibonacci.mif",
 		ram_block1a_10.init_file_layout = "port_a",
@@ -755,7 +744,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_10.port_a_address_clear = "none",
 		ram_block1a_10.port_a_address_width = 11,
 		ram_block1a_10.port_a_data_out_clear = "none",
-		ram_block1a_10.port_a_data_out_clock = "clock0",
+		ram_block1a_10.port_a_data_out_clock = "none",
 		ram_block1a_10.port_a_data_width = 1,
 		ram_block1a_10.port_a_first_address = 0,
 		ram_block1a_10.port_a_first_bit_number = 10,
@@ -807,7 +796,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_11.clk0_core_clock_enable = "ena0",
 		ram_block1a_11.clk0_input_clock_enable = "none",
-		ram_block1a_11.clk0_output_clock_enable = "none",
 		ram_block1a_11.connectivity_checking = "OFF",
 		ram_block1a_11.init_file = "fibonacci.mif",
 		ram_block1a_11.init_file_layout = "port_a",
@@ -817,7 +805,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_11.port_a_address_clear = "none",
 		ram_block1a_11.port_a_address_width = 11,
 		ram_block1a_11.port_a_data_out_clear = "none",
-		ram_block1a_11.port_a_data_out_clock = "clock0",
+		ram_block1a_11.port_a_data_out_clock = "none",
 		ram_block1a_11.port_a_data_width = 1,
 		ram_block1a_11.port_a_first_address = 0,
 		ram_block1a_11.port_a_first_bit_number = 11,
@@ -869,17 +857,16 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_12.clk0_core_clock_enable = "ena0",
 		ram_block1a_12.clk0_input_clock_enable = "none",
-		ram_block1a_12.clk0_output_clock_enable = "none",
 		ram_block1a_12.connectivity_checking = "OFF",
 		ram_block1a_12.init_file = "fibonacci.mif",
 		ram_block1a_12.init_file_layout = "port_a",
 		ram_block1a_12.logical_ram_name = "ALTSYNCRAM",
-		ram_block1a_12.mem_init0 = 2048'h0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F6200F0,
+		ram_block1a_12.mem_init0 = 2048'h0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000F6000F0,
 		ram_block1a_12.operation_mode = "rom",
 		ram_block1a_12.port_a_address_clear = "none",
 		ram_block1a_12.port_a_address_width = 11,
 		ram_block1a_12.port_a_data_out_clear = "none",
-		ram_block1a_12.port_a_data_out_clock = "clock0",
+		ram_block1a_12.port_a_data_out_clock = "none",
 		ram_block1a_12.port_a_data_width = 1,
 		ram_block1a_12.port_a_first_address = 0,
 		ram_block1a_12.port_a_first_bit_number = 12,
@@ -931,7 +918,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_13.clk0_core_clock_enable = "ena0",
 		ram_block1a_13.clk0_input_clock_enable = "none",
-		ram_block1a_13.clk0_output_clock_enable = "none",
 		ram_block1a_13.connectivity_checking = "OFF",
 		ram_block1a_13.init_file = "fibonacci.mif",
 		ram_block1a_13.init_file_layout = "port_a",
@@ -941,7 +927,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_13.port_a_address_clear = "none",
 		ram_block1a_13.port_a_address_width = 11,
 		ram_block1a_13.port_a_data_out_clear = "none",
-		ram_block1a_13.port_a_data_out_clock = "clock0",
+		ram_block1a_13.port_a_data_out_clock = "none",
 		ram_block1a_13.port_a_data_width = 1,
 		ram_block1a_13.port_a_first_address = 0,
 		ram_block1a_13.port_a_first_bit_number = 13,
@@ -993,7 +979,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_14.clk0_core_clock_enable = "ena0",
 		ram_block1a_14.clk0_input_clock_enable = "none",
-		ram_block1a_14.clk0_output_clock_enable = "none",
 		ram_block1a_14.connectivity_checking = "OFF",
 		ram_block1a_14.init_file = "fibonacci.mif",
 		ram_block1a_14.init_file_layout = "port_a",
@@ -1003,7 +988,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_14.port_a_address_clear = "none",
 		ram_block1a_14.port_a_address_width = 11,
 		ram_block1a_14.port_a_data_out_clear = "none",
-		ram_block1a_14.port_a_data_out_clock = "clock0",
+		ram_block1a_14.port_a_data_out_clock = "none",
 		ram_block1a_14.port_a_data_width = 1,
 		ram_block1a_14.port_a_first_address = 0,
 		ram_block1a_14.port_a_first_bit_number = 14,
@@ -1055,7 +1040,6 @@ module  ROMinstructions_altsyncram
 	defparam
 		ram_block1a_15.clk0_core_clock_enable = "ena0",
 		ram_block1a_15.clk0_input_clock_enable = "none",
-		ram_block1a_15.clk0_output_clock_enable = "none",
 		ram_block1a_15.connectivity_checking = "OFF",
 		ram_block1a_15.init_file = "fibonacci.mif",
 		ram_block1a_15.init_file_layout = "port_a",
@@ -1065,7 +1049,7 @@ module  ROMinstructions_altsyncram
 		ram_block1a_15.port_a_address_clear = "none",
 		ram_block1a_15.port_a_address_width = 11,
 		ram_block1a_15.port_a_data_out_clear = "none",
-		ram_block1a_15.port_a_data_out_clock = "clock0",
+		ram_block1a_15.port_a_data_out_clock = "none",
 		ram_block1a_15.port_a_data_width = 1,
 		ram_block1a_15.port_a_first_address = 0,
 		ram_block1a_15.port_a_first_bit_number = 15,
@@ -1138,7 +1122,7 @@ endmodule
 // Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "2048"
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 // Retrieval info: PRIVATE: RegAddr NUMERIC "1"
-// Retrieval info: PRIVATE: RegOutput NUMERIC "1"
+// Retrieval info: PRIVATE: RegOutput NUMERIC "0"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "1"
 // Retrieval info: PRIVATE: SingleClock NUMERIC "1"
 // Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
@@ -1156,7 +1140,7 @@ endmodule
 // Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "2048"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "ROM"
 // Retrieval info: CONSTANT: OUTDATA_ACLR_A STRING "NONE"
-// Retrieval info: CONSTANT: OUTDATA_REG_A STRING "CLOCK0"
+// Retrieval info: CONSTANT: OUTDATA_REG_A STRING "UNREGISTERED"
 // Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "11"
 // Retrieval info: CONSTANT: WIDTH_A NUMERIC "16"
 // Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"

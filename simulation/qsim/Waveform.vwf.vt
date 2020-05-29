@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/29/2020 21:26:21"
+// Generated on "05/30/2020 01:47:04"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          CPU
 // 
@@ -33,26 +33,44 @@ module CPU_vlg_vec_tst();
 reg CLK;
 reg [15:0] INPUT;
 // wires                                               
+wire CARRYOUT;
+wire cntenpc;
+wire EXEC1;
+wire EXEC2;
+wire EXEC3;
+wire FETCH;
 wire [15:0] OUTPUT;
 wire [15:0] r0;
 wire [15:0] r1;
 wire [15:0] r2;
 wire [15:0] r3;
+wire [15:0] RAMout;
+wire [10:0] ROMaddress;
+wire [15:0] ROMout;
 
 // assign statements (if any)                          
 CPU i1 (
 // port map - connection between master ports and signals/registers   
+	.CARRYOUT(CARRYOUT),
 	.CLK(CLK),
+	.cntenpc(cntenpc),
+	.EXEC1(EXEC1),
+	.EXEC2(EXEC2),
+	.EXEC3(EXEC3),
+	.FETCH(FETCH),
 	.\INPUT (INPUT),
 	.\OUTPUT (OUTPUT),
 	.r0(r0),
 	.r1(r1),
 	.r2(r2),
-	.r3(r3)
+	.r3(r3),
+	.RAMout(RAMout),
+	.ROMaddress(ROMaddress),
+	.ROMout(ROMout)
 );
 initial 
 begin 
-#1000000 $finish;
+#10000000 $finish;
 end 
 
 // CLK
@@ -125,7 +143,7 @@ end
 // \INPUT [ 3 ]
 initial
 begin
-	INPUT[3] = 1'b0;
+	INPUT[3] = 1'b1;
 end 
 // \INPUT [ 2 ]
 initial
@@ -140,7 +158,7 @@ end
 // \INPUT [ 0 ]
 initial
 begin
-	INPUT[0] = 1'b1;
+	INPUT[0] = 1'b0;
 end 
 endmodule
 
