@@ -3,12 +3,19 @@ module alu
 input [15:0] instr,
 input [15:0] inreg1,
 input [15:0] inreg2,
-input [15:0] inp,
-input carryin,
+input carrystatus,
+input exec1,
 output [15:0] aluout,
+output [1:0] regM,
+output sel_mux_mem_alu,
+output sel_mux_inp,
+output output_en,
 output carryout,
 output carryen,
-output wenout
+output wenout,
+output [1:0] RegN,
+output [1:0] RegD,
+output sel_mux_regD
 );
 
 reg [31:0] mul0;
@@ -30,12 +37,30 @@ reg [31:0] mul15;
 reg [31:0] mul;
 
 reg [16:0] alusum;
+wire [4:0] regwork = instr[15:11];
 wire [7:0] op = instr[15:8];
 wire [1:0] rd = instr[7:6];
 wire [1:0] rm = instr[5:4];
 wire [1:0] rn = instr[3:2];
 wire carrynbl = instr[1];
-wire cin = instr[0]? carryin : 0;
+wire cin = instr[0]? carrystatus : 0;
+
+
+assign regM = rm;
+assign RegN = rn;
+assign RegD = rd;
+
+assign sel_mux_mem_alu = regwork;
+assign sel_mux_inp = exec1&instr[15]&instr[14]&instr[13]&instr[12]&instr[11]&instr[10]&~instr[9]&~instr[8];
+assign sel_mux_regD = regwork;
+
+assign output_en = exec1&instr[15]&instr[14]&instr[13]&instr[12]&instr[11]&instr[10]&~instr[9]&instr[8];
+assign carryen = exec1&carrynbl;
+assign wenout = exec1&regwork&~(instr[15]&instr[14]&instr[13]&instr[12]&instr[11]&instr[10]&~instr[9]&instr[8]);
+
+
+
+
 
 always @(*)
 	begin
@@ -45,8 +70,7 @@ always @(*)
 			8'b11111001 : alusum = {1'b0,inreg1} - {1'b0,inreg2} + cin;
 			8'b11111010 : alusum = {1'b0,inreg1} + 1;
 			8'b11111011 : alusum = {1'b0,inreg1} - 1;
-			8'b11111100 : alusum = {1'b0,inp};
-			8'b11111101 :
+			8'b11111110 :
 				begin
 					mul0 = inreg1[0] ? inreg2 : 0;
 					mul1 = inreg1[1] ? inreg2 << 1 : 0;
@@ -72,7 +96,7 @@ always @(*)
 	
 	end
 
-assign alucout = alusum [16]; // carry bit from sum, or shift if OP = 011
+assign carryout = alusum [16]; 
 assign aluout = alusum [15:0];
 
 	
