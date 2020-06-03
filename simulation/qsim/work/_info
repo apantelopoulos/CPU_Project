@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/simulation/qsim
+vCPU
+!s110 1590792426
+!i10b 1
+!s100 Tm^Q`>j;F<>c<F`:9WJoC1
+ISjH4n6Z9[UVgI5=;lXY]D2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1590792425
+8CPU.vo
+FCPU.vo
+L0 32
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1590792426.000000
+!s107 CPU.vo|
+!s90 -work|work|CPU.vo|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+n@c@p@u
+vCPU_vlg_vec_tst
+!s110 1590792427
+!i10b 1
+!s100 Xe66agaIKRUklL;9`A11>0
+Izd?dj9Ni2R9`I]k4`dd<o0
+R1
+R0
+w1590792424
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+R2
+r1
+!s85 0
+31
+!s108 1590792427.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R3
+R4
+n@c@p@u_vlg_vec_tst

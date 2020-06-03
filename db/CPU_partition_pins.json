@@ -4,67 +4,155 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Dout[15]",
+					"name" : "FETCH",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[14]",
+					"name" : "ROMout[15]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[13]",
+					"name" : "ROMout[14]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[12]",
+					"name" : "ROMout[13]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[11]",
+					"name" : "ROMout[12]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[10]",
+					"name" : "ROMout[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[9]",
+					"name" : "ROMout[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[8]",
+					"name" : "ROMout[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[7]",
+					"name" : "ROMout[8]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[6]",
+					"name" : "ROMout[7]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[5]",
+					"name" : "ROMout[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[4]",
+					"name" : "ROMout[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[3]",
+					"name" : "ROMout[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[2]",
+					"name" : "ROMout[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[1]",
+					"name" : "ROMout[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Dout[0]",
+					"name" : "ROMout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ROMout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "EXEC1",
+					"strict" : false
+				},
+				{
+					"name" : "EXEC2",
+					"strict" : false
+				},
+				{
+					"name" : "EXEC3",
+					"strict" : false
+				},
+				{
+					"name" : "cntenpc",
+					"strict" : false
+				},
+				{
+					"name" : "CARRYOUT",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "OUTPUT[0]",
 					"strict" : false
 				},
 				{
@@ -324,155 +412,111 @@
 					"strict" : false
 				},
 				{
-					"name" : "Rm[15]",
+					"name" : "RAMout[15]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[14]",
+					"name" : "RAMout[14]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[13]",
+					"name" : "RAMout[13]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[12]",
+					"name" : "RAMout[12]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[11]",
+					"name" : "RAMout[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[10]",
+					"name" : "RAMout[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[9]",
+					"name" : "RAMout[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[8]",
+					"name" : "RAMout[8]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[7]",
+					"name" : "RAMout[7]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[6]",
+					"name" : "RAMout[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[5]",
+					"name" : "RAMout[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[4]",
+					"name" : "RAMout[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[3]",
+					"name" : "RAMout[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[2]",
+					"name" : "RAMout[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[1]",
+					"name" : "RAMout[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[0]",
+					"name" : "RAMout[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[15]",
+					"name" : "ROMaddress[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[14]",
+					"name" : "ROMaddress[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[13]",
+					"name" : "ROMaddress[8]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[12]",
+					"name" : "ROMaddress[7]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[11]",
+					"name" : "ROMaddress[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[10]",
+					"name" : "ROMaddress[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[9]",
+					"name" : "ROMaddress[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[8]",
+					"name" : "ROMaddress[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[7]",
+					"name" : "ROMaddress[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[6]",
+					"name" : "ROMaddress[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Rn[5]",
-					"strict" : false
-				},
-				{
-					"name" : "Rn[4]",
-					"strict" : false
-				},
-				{
-					"name" : "Rn[3]",
-					"strict" : false
-				},
-				{
-					"name" : "Rn[2]",
-					"strict" : false
-				},
-				{
-					"name" : "Rn[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Rn[0]",
-					"strict" : false
-				},
-				{
-					"name" : "RegDSel[0]",
-					"strict" : false
-				},
-				{
-					"name" : "RegDSel[1]",
-					"strict" : false
-				},
-				{
-					"name" : "RegMSel[0]",
-					"strict" : false
-				},
-				{
-					"name" : "RegMSel[1]",
-					"strict" : false
-				},
-				{
-					"name" : "RegNSel[0]",
-					"strict" : false
-				},
-				{
-					"name" : "RegNSel[1]",
+					"name" : "ROMaddress[0]",
 					"strict" : false
 				},
 				{
@@ -480,71 +524,67 @@
 					"strict" : false
 				},
 				{
-					"name" : "Din[15]",
+					"name" : "INPUT[2]",
 					"strict" : false
 				},
 				{
-					"name" : "WrEn",
+					"name" : "INPUT[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[14]",
+					"name" : "INPUT[15]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[13]",
+					"name" : "INPUT[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[12]",
+					"name" : "INPUT[14]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[11]",
+					"name" : "INPUT[13]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[10]",
+					"name" : "INPUT[12]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[9]",
+					"name" : "INPUT[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[8]",
+					"name" : "INPUT[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[7]",
+					"name" : "INPUT[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[6]",
+					"name" : "INPUT[8]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[5]",
+					"name" : "INPUT[7]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[4]",
+					"name" : "INPUT[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[3]",
+					"name" : "INPUT[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[2]",
+					"name" : "INPUT[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Din[1]",
-					"strict" : false
-				},
-				{
-					"name" : "Din[0]",
+					"name" : "INPUT[3]",
 					"strict" : false
 				}
 			]

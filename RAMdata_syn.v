@@ -34,13 +34,13 @@
 //https://fpgasoftware.intel.com/eula.
 
 
-//altsyncram ADDRESS_ACLR_B="NONE" ADDRESS_REG_B="CLOCK0" CLOCK_ENABLE_INPUT_A="BYPASS" CLOCK_ENABLE_INPUT_B="BYPASS" CLOCK_ENABLE_OUTPUT_B="BYPASS" DEVICE_FAMILY="Cyclone V" NUMWORDS_A=4096 NUMWORDS_B=4096 OPERATION_MODE="DUAL_PORT" OUTDATA_ACLR_B="NONE" OUTDATA_REG_B="CLOCK0" POWER_UP_UNINITIALIZED="FALSE" READ_DURING_WRITE_MODE_MIXED_PORTS="OLD_DATA" WIDTH_A=16 WIDTH_B=16 WIDTH_BYTEENA_A=1 WIDTHAD_A=12 WIDTHAD_B=12 address_a address_b clock0 data_a q_b wren_a
+//altsyncram ADDRESS_ACLR_B="NONE" ADDRESS_REG_B="CLOCK0" CLOCK_ENABLE_INPUT_A="BYPASS" CLOCK_ENABLE_INPUT_B="BYPASS" CLOCK_ENABLE_OUTPUT_B="BYPASS" DEVICE_FAMILY="Cyclone V" NUMWORDS_A=2048 NUMWORDS_B=2048 OPERATION_MODE="DUAL_PORT" OUTDATA_ACLR_B="NONE" OUTDATA_REG_B="CLOCK0" POWER_UP_UNINITIALIZED="FALSE" READ_DURING_WRITE_MODE_MIXED_PORTS="OLD_DATA" WIDTH_A=16 WIDTH_B=16 WIDTH_BYTEENA_A=1 WIDTHAD_A=11 WIDTHAD_B=11 address_a address_b clock0 data_a q_b wren_a
 //VERSION_BEGIN 19.1 cbx_altera_syncram_nd_impl 2019:09:22:11:00:28:SJ cbx_altsyncram 2019:09:22:11:00:28:SJ cbx_cycloneii 2019:09:22:11:00:28:SJ cbx_lpm_add_sub 2019:09:22:11:00:28:SJ cbx_lpm_compare 2019:09:22:11:00:28:SJ cbx_lpm_decode 2019:09:22:11:00:28:SJ cbx_lpm_mux 2019:09:22:11:00:28:SJ cbx_mgl 2019:09:22:11:02:15:SJ cbx_nadder 2019:09:22:11:00:28:SJ cbx_stratix 2019:09:22:11:00:28:SJ cbx_stratixii 2019:09:22:11:00:28:SJ cbx_stratixiii 2019:09:22:11:00:28:SJ cbx_stratixv 2019:09:22:11:00:28:SJ cbx_util_mgl 2019:09:22:11:00:28:SJ  VERSION_END
 // synthesis VERILOG_INPUT_VERSION VERILOG_2001
 // altera message_off 10463
 
 
-//synthesis_resources = M10K 8 
+//synthesis_resources = M10K 4 
 //synopsys translate_off
 `timescale 1 ps / 1 ps
 //synopsys translate_on
@@ -53,8 +53,8 @@ module  RAMdata_altsyncram
 	data_a,
 	q_b,
 	wren_a) /* synthesis synthesis_clearbox=1 */;
-	input   [11:0]  address_a;
-	input   [11:0]  address_b;
+	input   [10:0]  address_a;
+	input   [10:0]  address_b;
 	input   clock0;
 	input   [15:0]  data_a;
 	output   [15:0]  q_b;
@@ -62,7 +62,7 @@ module  RAMdata_altsyncram
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
 `endif
-	tri1   [11:0]  address_b;
+	tri1   [10:0]  address_b;
 	tri1   clock0;
 	tri1   [15:0]  data_a;
 	tri0   wren_a;
@@ -86,19 +86,19 @@ module  RAMdata_altsyncram
 	wire  [0:0]   wire_ram_block1a_13portbdataout;
 	wire  [0:0]   wire_ram_block1a_14portbdataout;
 	wire  [0:0]   wire_ram_block1a_15portbdataout;
-	wire  [11:0]  address_a_wire;
-	wire  [11:0]  address_b_wire;
+	wire  [10:0]  address_a_wire;
+	wire  [10:0]  address_b_wire;
 
 	cyclonev_ram_block   ram_block1a_0
 	( 
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[0]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_0portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -137,23 +137,23 @@ module  RAMdata_altsyncram
 		ram_block1a_0.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_0.mixed_port_feed_through_mode = "old",
 		ram_block1a_0.operation_mode = "dual_port",
-		ram_block1a_0.port_a_address_width = 12,
+		ram_block1a_0.port_a_address_width = 11,
 		ram_block1a_0.port_a_data_width = 1,
 		ram_block1a_0.port_a_first_address = 0,
 		ram_block1a_0.port_a_first_bit_number = 0,
-		ram_block1a_0.port_a_last_address = 4095,
-		ram_block1a_0.port_a_logical_ram_depth = 4096,
+		ram_block1a_0.port_a_last_address = 2047,
+		ram_block1a_0.port_a_logical_ram_depth = 2048,
 		ram_block1a_0.port_a_logical_ram_width = 16,
 		ram_block1a_0.port_b_address_clear = "none",
 		ram_block1a_0.port_b_address_clock = "clock0",
-		ram_block1a_0.port_b_address_width = 12,
+		ram_block1a_0.port_b_address_width = 11,
 		ram_block1a_0.port_b_data_out_clear = "none",
 		ram_block1a_0.port_b_data_out_clock = "clock0",
 		ram_block1a_0.port_b_data_width = 1,
 		ram_block1a_0.port_b_first_address = 0,
 		ram_block1a_0.port_b_first_bit_number = 0,
-		ram_block1a_0.port_b_last_address = 4095,
-		ram_block1a_0.port_b_logical_ram_depth = 4096,
+		ram_block1a_0.port_b_last_address = 2047,
+		ram_block1a_0.port_b_logical_ram_depth = 2048,
 		ram_block1a_0.port_b_logical_ram_width = 16,
 		ram_block1a_0.port_b_read_enable_clock = "clock0",
 		ram_block1a_0.power_up_uninitialized = "false",
@@ -164,11 +164,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[1]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_1portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -207,23 +207,23 @@ module  RAMdata_altsyncram
 		ram_block1a_1.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_1.mixed_port_feed_through_mode = "old",
 		ram_block1a_1.operation_mode = "dual_port",
-		ram_block1a_1.port_a_address_width = 12,
+		ram_block1a_1.port_a_address_width = 11,
 		ram_block1a_1.port_a_data_width = 1,
 		ram_block1a_1.port_a_first_address = 0,
 		ram_block1a_1.port_a_first_bit_number = 1,
-		ram_block1a_1.port_a_last_address = 4095,
-		ram_block1a_1.port_a_logical_ram_depth = 4096,
+		ram_block1a_1.port_a_last_address = 2047,
+		ram_block1a_1.port_a_logical_ram_depth = 2048,
 		ram_block1a_1.port_a_logical_ram_width = 16,
 		ram_block1a_1.port_b_address_clear = "none",
 		ram_block1a_1.port_b_address_clock = "clock0",
-		ram_block1a_1.port_b_address_width = 12,
+		ram_block1a_1.port_b_address_width = 11,
 		ram_block1a_1.port_b_data_out_clear = "none",
 		ram_block1a_1.port_b_data_out_clock = "clock0",
 		ram_block1a_1.port_b_data_width = 1,
 		ram_block1a_1.port_b_first_address = 0,
 		ram_block1a_1.port_b_first_bit_number = 1,
-		ram_block1a_1.port_b_last_address = 4095,
-		ram_block1a_1.port_b_logical_ram_depth = 4096,
+		ram_block1a_1.port_b_last_address = 2047,
+		ram_block1a_1.port_b_logical_ram_depth = 2048,
 		ram_block1a_1.port_b_logical_ram_width = 16,
 		ram_block1a_1.port_b_read_enable_clock = "clock0",
 		ram_block1a_1.power_up_uninitialized = "false",
@@ -234,11 +234,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[2]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_2portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -277,23 +277,23 @@ module  RAMdata_altsyncram
 		ram_block1a_2.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_2.mixed_port_feed_through_mode = "old",
 		ram_block1a_2.operation_mode = "dual_port",
-		ram_block1a_2.port_a_address_width = 12,
+		ram_block1a_2.port_a_address_width = 11,
 		ram_block1a_2.port_a_data_width = 1,
 		ram_block1a_2.port_a_first_address = 0,
 		ram_block1a_2.port_a_first_bit_number = 2,
-		ram_block1a_2.port_a_last_address = 4095,
-		ram_block1a_2.port_a_logical_ram_depth = 4096,
+		ram_block1a_2.port_a_last_address = 2047,
+		ram_block1a_2.port_a_logical_ram_depth = 2048,
 		ram_block1a_2.port_a_logical_ram_width = 16,
 		ram_block1a_2.port_b_address_clear = "none",
 		ram_block1a_2.port_b_address_clock = "clock0",
-		ram_block1a_2.port_b_address_width = 12,
+		ram_block1a_2.port_b_address_width = 11,
 		ram_block1a_2.port_b_data_out_clear = "none",
 		ram_block1a_2.port_b_data_out_clock = "clock0",
 		ram_block1a_2.port_b_data_width = 1,
 		ram_block1a_2.port_b_first_address = 0,
 		ram_block1a_2.port_b_first_bit_number = 2,
-		ram_block1a_2.port_b_last_address = 4095,
-		ram_block1a_2.port_b_logical_ram_depth = 4096,
+		ram_block1a_2.port_b_last_address = 2047,
+		ram_block1a_2.port_b_logical_ram_depth = 2048,
 		ram_block1a_2.port_b_logical_ram_width = 16,
 		ram_block1a_2.port_b_read_enable_clock = "clock0",
 		ram_block1a_2.power_up_uninitialized = "false",
@@ -304,11 +304,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[3]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_3portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -347,23 +347,23 @@ module  RAMdata_altsyncram
 		ram_block1a_3.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_3.mixed_port_feed_through_mode = "old",
 		ram_block1a_3.operation_mode = "dual_port",
-		ram_block1a_3.port_a_address_width = 12,
+		ram_block1a_3.port_a_address_width = 11,
 		ram_block1a_3.port_a_data_width = 1,
 		ram_block1a_3.port_a_first_address = 0,
 		ram_block1a_3.port_a_first_bit_number = 3,
-		ram_block1a_3.port_a_last_address = 4095,
-		ram_block1a_3.port_a_logical_ram_depth = 4096,
+		ram_block1a_3.port_a_last_address = 2047,
+		ram_block1a_3.port_a_logical_ram_depth = 2048,
 		ram_block1a_3.port_a_logical_ram_width = 16,
 		ram_block1a_3.port_b_address_clear = "none",
 		ram_block1a_3.port_b_address_clock = "clock0",
-		ram_block1a_3.port_b_address_width = 12,
+		ram_block1a_3.port_b_address_width = 11,
 		ram_block1a_3.port_b_data_out_clear = "none",
 		ram_block1a_3.port_b_data_out_clock = "clock0",
 		ram_block1a_3.port_b_data_width = 1,
 		ram_block1a_3.port_b_first_address = 0,
 		ram_block1a_3.port_b_first_bit_number = 3,
-		ram_block1a_3.port_b_last_address = 4095,
-		ram_block1a_3.port_b_logical_ram_depth = 4096,
+		ram_block1a_3.port_b_last_address = 2047,
+		ram_block1a_3.port_b_logical_ram_depth = 2048,
 		ram_block1a_3.port_b_logical_ram_width = 16,
 		ram_block1a_3.port_b_read_enable_clock = "clock0",
 		ram_block1a_3.power_up_uninitialized = "false",
@@ -374,11 +374,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[4]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_4portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -417,23 +417,23 @@ module  RAMdata_altsyncram
 		ram_block1a_4.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_4.mixed_port_feed_through_mode = "old",
 		ram_block1a_4.operation_mode = "dual_port",
-		ram_block1a_4.port_a_address_width = 12,
+		ram_block1a_4.port_a_address_width = 11,
 		ram_block1a_4.port_a_data_width = 1,
 		ram_block1a_4.port_a_first_address = 0,
 		ram_block1a_4.port_a_first_bit_number = 4,
-		ram_block1a_4.port_a_last_address = 4095,
-		ram_block1a_4.port_a_logical_ram_depth = 4096,
+		ram_block1a_4.port_a_last_address = 2047,
+		ram_block1a_4.port_a_logical_ram_depth = 2048,
 		ram_block1a_4.port_a_logical_ram_width = 16,
 		ram_block1a_4.port_b_address_clear = "none",
 		ram_block1a_4.port_b_address_clock = "clock0",
-		ram_block1a_4.port_b_address_width = 12,
+		ram_block1a_4.port_b_address_width = 11,
 		ram_block1a_4.port_b_data_out_clear = "none",
 		ram_block1a_4.port_b_data_out_clock = "clock0",
 		ram_block1a_4.port_b_data_width = 1,
 		ram_block1a_4.port_b_first_address = 0,
 		ram_block1a_4.port_b_first_bit_number = 4,
-		ram_block1a_4.port_b_last_address = 4095,
-		ram_block1a_4.port_b_logical_ram_depth = 4096,
+		ram_block1a_4.port_b_last_address = 2047,
+		ram_block1a_4.port_b_logical_ram_depth = 2048,
 		ram_block1a_4.port_b_logical_ram_width = 16,
 		ram_block1a_4.port_b_read_enable_clock = "clock0",
 		ram_block1a_4.power_up_uninitialized = "false",
@@ -444,11 +444,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[5]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_5portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -487,23 +487,23 @@ module  RAMdata_altsyncram
 		ram_block1a_5.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_5.mixed_port_feed_through_mode = "old",
 		ram_block1a_5.operation_mode = "dual_port",
-		ram_block1a_5.port_a_address_width = 12,
+		ram_block1a_5.port_a_address_width = 11,
 		ram_block1a_5.port_a_data_width = 1,
 		ram_block1a_5.port_a_first_address = 0,
 		ram_block1a_5.port_a_first_bit_number = 5,
-		ram_block1a_5.port_a_last_address = 4095,
-		ram_block1a_5.port_a_logical_ram_depth = 4096,
+		ram_block1a_5.port_a_last_address = 2047,
+		ram_block1a_5.port_a_logical_ram_depth = 2048,
 		ram_block1a_5.port_a_logical_ram_width = 16,
 		ram_block1a_5.port_b_address_clear = "none",
 		ram_block1a_5.port_b_address_clock = "clock0",
-		ram_block1a_5.port_b_address_width = 12,
+		ram_block1a_5.port_b_address_width = 11,
 		ram_block1a_5.port_b_data_out_clear = "none",
 		ram_block1a_5.port_b_data_out_clock = "clock0",
 		ram_block1a_5.port_b_data_width = 1,
 		ram_block1a_5.port_b_first_address = 0,
 		ram_block1a_5.port_b_first_bit_number = 5,
-		ram_block1a_5.port_b_last_address = 4095,
-		ram_block1a_5.port_b_logical_ram_depth = 4096,
+		ram_block1a_5.port_b_last_address = 2047,
+		ram_block1a_5.port_b_logical_ram_depth = 2048,
 		ram_block1a_5.port_b_logical_ram_width = 16,
 		ram_block1a_5.port_b_read_enable_clock = "clock0",
 		ram_block1a_5.power_up_uninitialized = "false",
@@ -514,11 +514,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[6]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_6portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -557,23 +557,23 @@ module  RAMdata_altsyncram
 		ram_block1a_6.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_6.mixed_port_feed_through_mode = "old",
 		ram_block1a_6.operation_mode = "dual_port",
-		ram_block1a_6.port_a_address_width = 12,
+		ram_block1a_6.port_a_address_width = 11,
 		ram_block1a_6.port_a_data_width = 1,
 		ram_block1a_6.port_a_first_address = 0,
 		ram_block1a_6.port_a_first_bit_number = 6,
-		ram_block1a_6.port_a_last_address = 4095,
-		ram_block1a_6.port_a_logical_ram_depth = 4096,
+		ram_block1a_6.port_a_last_address = 2047,
+		ram_block1a_6.port_a_logical_ram_depth = 2048,
 		ram_block1a_6.port_a_logical_ram_width = 16,
 		ram_block1a_6.port_b_address_clear = "none",
 		ram_block1a_6.port_b_address_clock = "clock0",
-		ram_block1a_6.port_b_address_width = 12,
+		ram_block1a_6.port_b_address_width = 11,
 		ram_block1a_6.port_b_data_out_clear = "none",
 		ram_block1a_6.port_b_data_out_clock = "clock0",
 		ram_block1a_6.port_b_data_width = 1,
 		ram_block1a_6.port_b_first_address = 0,
 		ram_block1a_6.port_b_first_bit_number = 6,
-		ram_block1a_6.port_b_last_address = 4095,
-		ram_block1a_6.port_b_logical_ram_depth = 4096,
+		ram_block1a_6.port_b_last_address = 2047,
+		ram_block1a_6.port_b_logical_ram_depth = 2048,
 		ram_block1a_6.port_b_logical_ram_width = 16,
 		ram_block1a_6.port_b_read_enable_clock = "clock0",
 		ram_block1a_6.power_up_uninitialized = "false",
@@ -584,11 +584,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[7]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_7portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -627,23 +627,23 @@ module  RAMdata_altsyncram
 		ram_block1a_7.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_7.mixed_port_feed_through_mode = "old",
 		ram_block1a_7.operation_mode = "dual_port",
-		ram_block1a_7.port_a_address_width = 12,
+		ram_block1a_7.port_a_address_width = 11,
 		ram_block1a_7.port_a_data_width = 1,
 		ram_block1a_7.port_a_first_address = 0,
 		ram_block1a_7.port_a_first_bit_number = 7,
-		ram_block1a_7.port_a_last_address = 4095,
-		ram_block1a_7.port_a_logical_ram_depth = 4096,
+		ram_block1a_7.port_a_last_address = 2047,
+		ram_block1a_7.port_a_logical_ram_depth = 2048,
 		ram_block1a_7.port_a_logical_ram_width = 16,
 		ram_block1a_7.port_b_address_clear = "none",
 		ram_block1a_7.port_b_address_clock = "clock0",
-		ram_block1a_7.port_b_address_width = 12,
+		ram_block1a_7.port_b_address_width = 11,
 		ram_block1a_7.port_b_data_out_clear = "none",
 		ram_block1a_7.port_b_data_out_clock = "clock0",
 		ram_block1a_7.port_b_data_width = 1,
 		ram_block1a_7.port_b_first_address = 0,
 		ram_block1a_7.port_b_first_bit_number = 7,
-		ram_block1a_7.port_b_last_address = 4095,
-		ram_block1a_7.port_b_logical_ram_depth = 4096,
+		ram_block1a_7.port_b_last_address = 2047,
+		ram_block1a_7.port_b_logical_ram_depth = 2048,
 		ram_block1a_7.port_b_logical_ram_width = 16,
 		ram_block1a_7.port_b_read_enable_clock = "clock0",
 		ram_block1a_7.power_up_uninitialized = "false",
@@ -654,11 +654,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[8]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_8portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -697,23 +697,23 @@ module  RAMdata_altsyncram
 		ram_block1a_8.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_8.mixed_port_feed_through_mode = "old",
 		ram_block1a_8.operation_mode = "dual_port",
-		ram_block1a_8.port_a_address_width = 12,
+		ram_block1a_8.port_a_address_width = 11,
 		ram_block1a_8.port_a_data_width = 1,
 		ram_block1a_8.port_a_first_address = 0,
 		ram_block1a_8.port_a_first_bit_number = 8,
-		ram_block1a_8.port_a_last_address = 4095,
-		ram_block1a_8.port_a_logical_ram_depth = 4096,
+		ram_block1a_8.port_a_last_address = 2047,
+		ram_block1a_8.port_a_logical_ram_depth = 2048,
 		ram_block1a_8.port_a_logical_ram_width = 16,
 		ram_block1a_8.port_b_address_clear = "none",
 		ram_block1a_8.port_b_address_clock = "clock0",
-		ram_block1a_8.port_b_address_width = 12,
+		ram_block1a_8.port_b_address_width = 11,
 		ram_block1a_8.port_b_data_out_clear = "none",
 		ram_block1a_8.port_b_data_out_clock = "clock0",
 		ram_block1a_8.port_b_data_width = 1,
 		ram_block1a_8.port_b_first_address = 0,
 		ram_block1a_8.port_b_first_bit_number = 8,
-		ram_block1a_8.port_b_last_address = 4095,
-		ram_block1a_8.port_b_logical_ram_depth = 4096,
+		ram_block1a_8.port_b_last_address = 2047,
+		ram_block1a_8.port_b_logical_ram_depth = 2048,
 		ram_block1a_8.port_b_logical_ram_width = 16,
 		ram_block1a_8.port_b_read_enable_clock = "clock0",
 		ram_block1a_8.power_up_uninitialized = "false",
@@ -724,11 +724,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[9]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_9portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -767,23 +767,23 @@ module  RAMdata_altsyncram
 		ram_block1a_9.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_9.mixed_port_feed_through_mode = "old",
 		ram_block1a_9.operation_mode = "dual_port",
-		ram_block1a_9.port_a_address_width = 12,
+		ram_block1a_9.port_a_address_width = 11,
 		ram_block1a_9.port_a_data_width = 1,
 		ram_block1a_9.port_a_first_address = 0,
 		ram_block1a_9.port_a_first_bit_number = 9,
-		ram_block1a_9.port_a_last_address = 4095,
-		ram_block1a_9.port_a_logical_ram_depth = 4096,
+		ram_block1a_9.port_a_last_address = 2047,
+		ram_block1a_9.port_a_logical_ram_depth = 2048,
 		ram_block1a_9.port_a_logical_ram_width = 16,
 		ram_block1a_9.port_b_address_clear = "none",
 		ram_block1a_9.port_b_address_clock = "clock0",
-		ram_block1a_9.port_b_address_width = 12,
+		ram_block1a_9.port_b_address_width = 11,
 		ram_block1a_9.port_b_data_out_clear = "none",
 		ram_block1a_9.port_b_data_out_clock = "clock0",
 		ram_block1a_9.port_b_data_width = 1,
 		ram_block1a_9.port_b_first_address = 0,
 		ram_block1a_9.port_b_first_bit_number = 9,
-		ram_block1a_9.port_b_last_address = 4095,
-		ram_block1a_9.port_b_logical_ram_depth = 4096,
+		ram_block1a_9.port_b_last_address = 2047,
+		ram_block1a_9.port_b_logical_ram_depth = 2048,
 		ram_block1a_9.port_b_logical_ram_width = 16,
 		ram_block1a_9.port_b_read_enable_clock = "clock0",
 		ram_block1a_9.power_up_uninitialized = "false",
@@ -794,11 +794,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[10]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_10portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -837,23 +837,23 @@ module  RAMdata_altsyncram
 		ram_block1a_10.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_10.mixed_port_feed_through_mode = "old",
 		ram_block1a_10.operation_mode = "dual_port",
-		ram_block1a_10.port_a_address_width = 12,
+		ram_block1a_10.port_a_address_width = 11,
 		ram_block1a_10.port_a_data_width = 1,
 		ram_block1a_10.port_a_first_address = 0,
 		ram_block1a_10.port_a_first_bit_number = 10,
-		ram_block1a_10.port_a_last_address = 4095,
-		ram_block1a_10.port_a_logical_ram_depth = 4096,
+		ram_block1a_10.port_a_last_address = 2047,
+		ram_block1a_10.port_a_logical_ram_depth = 2048,
 		ram_block1a_10.port_a_logical_ram_width = 16,
 		ram_block1a_10.port_b_address_clear = "none",
 		ram_block1a_10.port_b_address_clock = "clock0",
-		ram_block1a_10.port_b_address_width = 12,
+		ram_block1a_10.port_b_address_width = 11,
 		ram_block1a_10.port_b_data_out_clear = "none",
 		ram_block1a_10.port_b_data_out_clock = "clock0",
 		ram_block1a_10.port_b_data_width = 1,
 		ram_block1a_10.port_b_first_address = 0,
 		ram_block1a_10.port_b_first_bit_number = 10,
-		ram_block1a_10.port_b_last_address = 4095,
-		ram_block1a_10.port_b_logical_ram_depth = 4096,
+		ram_block1a_10.port_b_last_address = 2047,
+		ram_block1a_10.port_b_logical_ram_depth = 2048,
 		ram_block1a_10.port_b_logical_ram_width = 16,
 		ram_block1a_10.port_b_read_enable_clock = "clock0",
 		ram_block1a_10.power_up_uninitialized = "false",
@@ -864,11 +864,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[11]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_11portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -907,23 +907,23 @@ module  RAMdata_altsyncram
 		ram_block1a_11.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_11.mixed_port_feed_through_mode = "old",
 		ram_block1a_11.operation_mode = "dual_port",
-		ram_block1a_11.port_a_address_width = 12,
+		ram_block1a_11.port_a_address_width = 11,
 		ram_block1a_11.port_a_data_width = 1,
 		ram_block1a_11.port_a_first_address = 0,
 		ram_block1a_11.port_a_first_bit_number = 11,
-		ram_block1a_11.port_a_last_address = 4095,
-		ram_block1a_11.port_a_logical_ram_depth = 4096,
+		ram_block1a_11.port_a_last_address = 2047,
+		ram_block1a_11.port_a_logical_ram_depth = 2048,
 		ram_block1a_11.port_a_logical_ram_width = 16,
 		ram_block1a_11.port_b_address_clear = "none",
 		ram_block1a_11.port_b_address_clock = "clock0",
-		ram_block1a_11.port_b_address_width = 12,
+		ram_block1a_11.port_b_address_width = 11,
 		ram_block1a_11.port_b_data_out_clear = "none",
 		ram_block1a_11.port_b_data_out_clock = "clock0",
 		ram_block1a_11.port_b_data_width = 1,
 		ram_block1a_11.port_b_first_address = 0,
 		ram_block1a_11.port_b_first_bit_number = 11,
-		ram_block1a_11.port_b_last_address = 4095,
-		ram_block1a_11.port_b_logical_ram_depth = 4096,
+		ram_block1a_11.port_b_last_address = 2047,
+		ram_block1a_11.port_b_logical_ram_depth = 2048,
 		ram_block1a_11.port_b_logical_ram_width = 16,
 		ram_block1a_11.port_b_read_enable_clock = "clock0",
 		ram_block1a_11.power_up_uninitialized = "false",
@@ -934,11 +934,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[12]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_12portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -977,23 +977,23 @@ module  RAMdata_altsyncram
 		ram_block1a_12.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_12.mixed_port_feed_through_mode = "old",
 		ram_block1a_12.operation_mode = "dual_port",
-		ram_block1a_12.port_a_address_width = 12,
+		ram_block1a_12.port_a_address_width = 11,
 		ram_block1a_12.port_a_data_width = 1,
 		ram_block1a_12.port_a_first_address = 0,
 		ram_block1a_12.port_a_first_bit_number = 12,
-		ram_block1a_12.port_a_last_address = 4095,
-		ram_block1a_12.port_a_logical_ram_depth = 4096,
+		ram_block1a_12.port_a_last_address = 2047,
+		ram_block1a_12.port_a_logical_ram_depth = 2048,
 		ram_block1a_12.port_a_logical_ram_width = 16,
 		ram_block1a_12.port_b_address_clear = "none",
 		ram_block1a_12.port_b_address_clock = "clock0",
-		ram_block1a_12.port_b_address_width = 12,
+		ram_block1a_12.port_b_address_width = 11,
 		ram_block1a_12.port_b_data_out_clear = "none",
 		ram_block1a_12.port_b_data_out_clock = "clock0",
 		ram_block1a_12.port_b_data_width = 1,
 		ram_block1a_12.port_b_first_address = 0,
 		ram_block1a_12.port_b_first_bit_number = 12,
-		ram_block1a_12.port_b_last_address = 4095,
-		ram_block1a_12.port_b_logical_ram_depth = 4096,
+		ram_block1a_12.port_b_last_address = 2047,
+		ram_block1a_12.port_b_logical_ram_depth = 2048,
 		ram_block1a_12.port_b_logical_ram_width = 16,
 		ram_block1a_12.port_b_read_enable_clock = "clock0",
 		ram_block1a_12.power_up_uninitialized = "false",
@@ -1004,11 +1004,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[13]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_13portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -1047,23 +1047,23 @@ module  RAMdata_altsyncram
 		ram_block1a_13.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_13.mixed_port_feed_through_mode = "old",
 		ram_block1a_13.operation_mode = "dual_port",
-		ram_block1a_13.port_a_address_width = 12,
+		ram_block1a_13.port_a_address_width = 11,
 		ram_block1a_13.port_a_data_width = 1,
 		ram_block1a_13.port_a_first_address = 0,
 		ram_block1a_13.port_a_first_bit_number = 13,
-		ram_block1a_13.port_a_last_address = 4095,
-		ram_block1a_13.port_a_logical_ram_depth = 4096,
+		ram_block1a_13.port_a_last_address = 2047,
+		ram_block1a_13.port_a_logical_ram_depth = 2048,
 		ram_block1a_13.port_a_logical_ram_width = 16,
 		ram_block1a_13.port_b_address_clear = "none",
 		ram_block1a_13.port_b_address_clock = "clock0",
-		ram_block1a_13.port_b_address_width = 12,
+		ram_block1a_13.port_b_address_width = 11,
 		ram_block1a_13.port_b_data_out_clear = "none",
 		ram_block1a_13.port_b_data_out_clock = "clock0",
 		ram_block1a_13.port_b_data_width = 1,
 		ram_block1a_13.port_b_first_address = 0,
 		ram_block1a_13.port_b_first_bit_number = 13,
-		ram_block1a_13.port_b_last_address = 4095,
-		ram_block1a_13.port_b_logical_ram_depth = 4096,
+		ram_block1a_13.port_b_last_address = 2047,
+		ram_block1a_13.port_b_logical_ram_depth = 2048,
 		ram_block1a_13.port_b_logical_ram_width = 16,
 		ram_block1a_13.port_b_read_enable_clock = "clock0",
 		ram_block1a_13.power_up_uninitialized = "false",
@@ -1074,11 +1074,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[14]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_14portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -1117,23 +1117,23 @@ module  RAMdata_altsyncram
 		ram_block1a_14.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_14.mixed_port_feed_through_mode = "old",
 		ram_block1a_14.operation_mode = "dual_port",
-		ram_block1a_14.port_a_address_width = 12,
+		ram_block1a_14.port_a_address_width = 11,
 		ram_block1a_14.port_a_data_width = 1,
 		ram_block1a_14.port_a_first_address = 0,
 		ram_block1a_14.port_a_first_bit_number = 14,
-		ram_block1a_14.port_a_last_address = 4095,
-		ram_block1a_14.port_a_logical_ram_depth = 4096,
+		ram_block1a_14.port_a_last_address = 2047,
+		ram_block1a_14.port_a_logical_ram_depth = 2048,
 		ram_block1a_14.port_a_logical_ram_width = 16,
 		ram_block1a_14.port_b_address_clear = "none",
 		ram_block1a_14.port_b_address_clock = "clock0",
-		ram_block1a_14.port_b_address_width = 12,
+		ram_block1a_14.port_b_address_width = 11,
 		ram_block1a_14.port_b_data_out_clear = "none",
 		ram_block1a_14.port_b_data_out_clock = "clock0",
 		ram_block1a_14.port_b_data_width = 1,
 		ram_block1a_14.port_b_first_address = 0,
 		ram_block1a_14.port_b_first_bit_number = 14,
-		ram_block1a_14.port_b_last_address = 4095,
-		ram_block1a_14.port_b_logical_ram_depth = 4096,
+		ram_block1a_14.port_b_last_address = 2047,
+		ram_block1a_14.port_b_logical_ram_depth = 2048,
 		ram_block1a_14.port_b_logical_ram_width = 16,
 		ram_block1a_14.port_b_read_enable_clock = "clock0",
 		ram_block1a_14.power_up_uninitialized = "false",
@@ -1144,11 +1144,11 @@ module  RAMdata_altsyncram
 	.clk0(clock0),
 	.dftout(),
 	.eccstatus(),
-	.portaaddr({address_a_wire[11:0]}),
+	.portaaddr({address_a_wire[10:0]}),
 	.portadatain({data_a[15]}),
 	.portadataout(),
 	.portawe(wren_a),
-	.portbaddr({address_b_wire[11:0]}),
+	.portbaddr({address_b_wire[10:0]}),
 	.portbdataout(wire_ram_block1a_15portbdataout[0:0]),
 	.portbre(1'b1)
 	`ifndef FORMAL_VERIFICATION
@@ -1187,23 +1187,23 @@ module  RAMdata_altsyncram
 		ram_block1a_15.logical_ram_name = "ALTSYNCRAM",
 		ram_block1a_15.mixed_port_feed_through_mode = "old",
 		ram_block1a_15.operation_mode = "dual_port",
-		ram_block1a_15.port_a_address_width = 12,
+		ram_block1a_15.port_a_address_width = 11,
 		ram_block1a_15.port_a_data_width = 1,
 		ram_block1a_15.port_a_first_address = 0,
 		ram_block1a_15.port_a_first_bit_number = 15,
-		ram_block1a_15.port_a_last_address = 4095,
-		ram_block1a_15.port_a_logical_ram_depth = 4096,
+		ram_block1a_15.port_a_last_address = 2047,
+		ram_block1a_15.port_a_logical_ram_depth = 2048,
 		ram_block1a_15.port_a_logical_ram_width = 16,
 		ram_block1a_15.port_b_address_clear = "none",
 		ram_block1a_15.port_b_address_clock = "clock0",
-		ram_block1a_15.port_b_address_width = 12,
+		ram_block1a_15.port_b_address_width = 11,
 		ram_block1a_15.port_b_data_out_clear = "none",
 		ram_block1a_15.port_b_data_out_clock = "clock0",
 		ram_block1a_15.port_b_data_width = 1,
 		ram_block1a_15.port_b_first_address = 0,
 		ram_block1a_15.port_b_first_bit_number = 15,
-		ram_block1a_15.port_b_last_address = 4095,
-		ram_block1a_15.port_b_logical_ram_depth = 4096,
+		ram_block1a_15.port_b_last_address = 2047,
+		ram_block1a_15.port_b_logical_ram_depth = 2048,
 		ram_block1a_15.port_b_logical_ram_width = 16,
 		ram_block1a_15.port_b_read_enable_clock = "clock0",
 		ram_block1a_15.power_up_uninitialized = "false",
@@ -1230,8 +1230,8 @@ module RAMdata (
 
 	input	  clock;
 	input	[15:0]  data;
-	input	[11:0]  rdaddress;
-	input	[11:0]  wraddress;
+	input	[10:0]  rdaddress;
+	input	[10:0]  wraddress;
 	input	  wren;
 	output	[15:0]  q;
 `ifndef ALTERA_RESERVED_QIS
@@ -1289,7 +1289,7 @@ endmodule
 // Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 // Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
-// Retrieval info: PRIVATE: MEMSIZE NUMERIC "65536"
+// Retrieval info: PRIVATE: MEMSIZE NUMERIC "32768"
 // Retrieval info: PRIVATE: MEM_IN_BITS NUMERIC "0"
 // Retrieval info: PRIVATE: MIFfilename STRING ""
 // Retrieval info: PRIVATE: OPERATION_MODE NUMERIC "2"
@@ -1326,26 +1326,26 @@ endmodule
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_B STRING "BYPASS"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone V"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
-// Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "4096"
-// Retrieval info: CONSTANT: NUMWORDS_B NUMERIC "4096"
+// Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "2048"
+// Retrieval info: CONSTANT: NUMWORDS_B NUMERIC "2048"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "DUAL_PORT"
 // Retrieval info: CONSTANT: OUTDATA_ACLR_B STRING "NONE"
 // Retrieval info: CONSTANT: OUTDATA_REG_B STRING "CLOCK0"
 // Retrieval info: CONSTANT: POWER_UP_UNINITIALIZED STRING "FALSE"
 // Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_MIXED_PORTS STRING "OLD_DATA"
-// Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "12"
-// Retrieval info: CONSTANT: WIDTHAD_B NUMERIC "12"
+// Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "11"
+// Retrieval info: CONSTANT: WIDTHAD_B NUMERIC "11"
 // Retrieval info: CONSTANT: WIDTH_A NUMERIC "16"
 // Retrieval info: CONSTANT: WIDTH_B NUMERIC "16"
 // Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "1"
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
 // Retrieval info: USED_PORT: data 0 0 16 0 INPUT NODEFVAL "data[15..0]"
 // Retrieval info: USED_PORT: q 0 0 16 0 OUTPUT NODEFVAL "q[15..0]"
-// Retrieval info: USED_PORT: rdaddress 0 0 12 0 INPUT NODEFVAL "rdaddress[11..0]"
-// Retrieval info: USED_PORT: wraddress 0 0 12 0 INPUT NODEFVAL "wraddress[11..0]"
+// Retrieval info: USED_PORT: rdaddress 0 0 11 0 INPUT NODEFVAL "rdaddress[10..0]"
+// Retrieval info: USED_PORT: wraddress 0 0 11 0 INPUT NODEFVAL "wraddress[10..0]"
 // Retrieval info: USED_PORT: wren 0 0 0 0 INPUT GND "wren"
-// Retrieval info: CONNECT: @address_a 0 0 12 0 wraddress 0 0 12 0
-// Retrieval info: CONNECT: @address_b 0 0 12 0 rdaddress 0 0 12 0
+// Retrieval info: CONNECT: @address_a 0 0 11 0 wraddress 0 0 11 0
+// Retrieval info: CONNECT: @address_b 0 0 11 0 rdaddress 0 0 11 0
 // Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: @data_a 0 0 16 0 data 0 0 16 0
 // Retrieval info: CONNECT: @wren_a 0 0 0 0 wren 0 0 0 0

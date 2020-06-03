@@ -143,13 +143,6 @@ https://fpgasoftware.intel.com/eula.
 		(text "sel_mux_din_ram" (rect 122 187 195 199)(font "Arial" ))
 		(line (pt 216 192)(pt 200 192)(line_width 1))
 	)
-	(port
-		(pt 216 208)
-		(output)
-		(text "sel_mux_output" (rect 0 0 63 12)(font "Arial" ))
-		(text "sel_mux_output" (rect 132 203 195 215)(font "Arial" ))
-		(line (pt 216 208)(pt 200 208)(line_width 1))
-	)
 	(drawing
 		(rectangle (rect 16 16 200 224)(line_width 1))
 	)
