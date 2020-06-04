@@ -26,12 +26,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sat May 30 01:47:03 2020
+    Info: Processing started: Thu Jun 04 23:42:56 2020
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off CPU -c CPU --vector_source="C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/Waveform.vwf" --testbench_file="C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/simulation/qsim/Waveform.vwf.vt"
 Info (119006): Selected device 5CGXFC7C7F23C8 for design "CPU"
+Warning (18550): Found RAM instances implemented as ROM because the write logic is disabled. One instance is listed below as an example.
+    Info (119043): Atom "RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|ram_block1a15" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-Ignoring output pin "ROMout[14]" in vector source file when writing test bench files
+all processors): 00:00:01
 
 Completed successfully. 
 
@@ -58,14 +60,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sat May 30 01:47:04 2020
+    Info: Processing started: Thu Jun 04 23:42:57 2020
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/simulation/qsim/" CPU -c CPU
 Info (119006): Selected device 5CGXFC7C7F23C8 for design "CPU"
+Warning (18550): Found RAM instances implemented as ROM because the write logic is disabled. One instance is listed below as an example.
+    Info (119043): Atom "RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|ram_block1a15" is instantiated as RAM, but it is actually implemented as ROM function because the write logic is always disabled
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file CPU.vo in folder "C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4736 megabytes
-    Info: Processing ended: Sat May 30 01:47:05 2020
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4734 megabytes
+    Info: Processing ended: Thu Jun 04 23:42:58 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -88,31 +92,29 @@ Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # do CPU.do
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:47:06 on May 30,2020
+# Start time: 23:42:59 on Jun 04,2020
 # vlog -work work CPU.vo 
 # -- Compiling module CPU
 
 # 
 # Top level modules:
 # 	CPU
-# End time: 01:47:07 on May 30,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
 
+# End time: 23:42:59 on Jun 04,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:47:07 on May 30,2020
+# Start time: 23:42:59 on Jun 04,2020
 # vlog -work work Waveform.vwf.vt 
 # -- Compiling module CPU_vlg_vec_tst
 # 
 # Top level modules:
 # 	CPU_vlg_vec_tst
-
-# End time: 01:47:07 on May 30,2020, Elapsed time: 0:00:00
+# End time: 23:42:59 on Jun 04,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.CPU_vlg_vec_tst 
-# Start time: 01:47:07 on May 30,2020
+# Start time: 23:42:59 on Jun 04,2020
 # Loading work.CPU_vlg_vec_tst
 # Loading work.CPU
 # Loading cyclonev_ver.cyclonev_io_obuf
@@ -131,7 +133,7 @@ Reading C:/intelFPGA_lite/19.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # ** Note: $finish    : Waveform.vwf.vt(73)
 #    Time: 10 us  Iteration: 0  Instance: /CPU_vlg_vec_tst
-# End time: 01:47:08 on May 30,2020, Elapsed time: 0:00:01
+# End time: 23:43:00 on Jun 04,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
@@ -144,7 +146,7 @@ Reading C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronic
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/simulation/qsim/CPU_20200530014708.sim.vwf
+Writing the resulting VWF to C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/simulation/qsim/CPU_20200604234300.sim.vwf
 
 Finished VCD to VWF conversion.
 

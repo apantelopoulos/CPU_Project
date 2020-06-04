@@ -1194,9 +1194,27 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 24 184 240 312)
-	(text "RAMinstr" (rect 66 0 129 16)(font "Arial" (font_size 10)))
-	(text "inst2" (rect 8 112 30 129)(font "Intel Clear" ))
+	(rect -8 216 24 248)
+	(text "GND" (rect 6 8 16 29)(font "Arial" (font_size 6))(vertical))
+	(text "inst3" (rect -6 3 11 25)(font "Intel Clear" )(vertical)(invisible))
+	(port
+		(pt 32 16)
+		(output)
+		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
+		(text "1" (rect 20 18 32 23)(font "Courier New" (bold))(vertical)(invisible))
+		(line (pt 24 16)(pt 32 16))
+	)
+	(drawing
+		(line (pt 24 8)(pt 16 16))
+		(line (pt 16 16)(pt 24 24))
+		(line (pt 24 8)(pt 24 24))
+	)
+	(rotate270)
+)
+(symbol
+	(rect 1672 200 1888 328)
+	(text "DataRAM" (rect 63 0 129 16)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 112 25 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1278,27 +1296,9 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect -8 216 24 248)
-	(text "GND" (rect 6 8 16 29)(font "Arial" (font_size 6))(vertical))
-	(text "inst3" (rect -6 3 11 25)(font "Intel Clear" )(vertical)(invisible))
-	(port
-		(pt 32 16)
-		(output)
-		(text "1" (rect 18 0 23 12)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 20 18 32 23)(font "Courier New" (bold))(vertical)(invisible))
-		(line (pt 24 16)(pt 32 16))
-	)
-	(drawing
-		(line (pt 24 8)(pt 16 16))
-		(line (pt 16 16)(pt 24 24))
-		(line (pt 24 8)(pt 24 24))
-	)
-	(rotate270)
-)
-(symbol
-	(rect 1672 200 1888 328)
-	(text "DataRAM" (rect 63 0 129 16)(font "Arial" (font_size 10)))
-	(text "inst" (rect 8 112 25 124)(font "Arial" ))
+	(rect 24 184 240 312)
+	(text "RAMinstr" (rect 66 0 129 16)(font "Arial" (font_size 10)))
+	(text "inst2" (rect 8 112 31 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
