@@ -92,6 +92,7 @@ always @(*)
 					alusum = mul[16:0];				
 				 
 				end 
+			8'b11111111 : alusum = {1'b0,inreg1} >> instr[3:0];
 			
 	endcase
 	
