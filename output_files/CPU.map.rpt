@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Thu Jun 04 23:41:13 2020
+Sun Jun 07 19:13:01 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -35,14 +35,13 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  27. Parameter Settings for User Entity Instance: DataRAM:inst|altsyncram:altsyncram_component
  28. Parameter Settings for User Entity Instance: BUSMUX:inst6
  29. Parameter Settings for User Entity Instance: RAMinstr:inst2|altsyncram:altsyncram_component
- 30. Parameter Settings for User Entity Instance: BUSMUX:inst5
- 31. Parameter Settings for User Entity Instance: LPM_COUNTER:PC
- 32. Parameter Settings for User Entity Instance: BUSMUX:inst7
- 33. Parameter Settings for User Entity Instance: LPM_ADD_SUB:inst9
- 34. altsyncram Parameter Settings by Entity Instance
- 35. Post-Synthesis Netlist Statistics for Top Partition
- 36. Elapsed Time Per Partition
- 37. Analysis & Synthesis Messages
+ 30. Parameter Settings for User Entity Instance: LPM_COUNTER:PC
+ 31. Parameter Settings for User Entity Instance: BUSMUX:inst7
+ 32. Parameter Settings for User Entity Instance: LPM_ADD_SUB:inst9
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
 
 
 
@@ -69,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Jun 04 23:41:13 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sun Jun 07 19:13:01 2020       ;
 ; Quartus Prime Version           ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                   ; CPU                                         ;
 ; Top-level Entity Name           ; CPU                                         ;
@@ -189,7 +188,8 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -260,14 +260,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 305       ;
+; Estimate of Logic utilization (ALMs needed) ; 300       ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 492       ;
+; Combinational ALUT usage for logic          ; 481       ;
 ;     -- 7 input functions                    ; 5         ;
 ;     -- 6 input functions                    ; 107       ;
 ;     -- 5 input functions                    ; 43        ;
 ;     -- 4 input functions                    ; 85        ;
-;     -- <=3 input functions                  ; 252       ;
+;     -- <=3 input functions                  ; 241       ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 94        ;
 ;                                             ;           ;
@@ -279,7 +279,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 126       ;
-; Total fan-out                               ; 2974      ;
+; Total fan-out                               ; 2941      ;
 ; Average fan-out                             ; 3.27      ;
 +---------------------------------------------+-----------+
 
@@ -289,7 +289,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                ; Entity Name        ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------+--------------------+--------------+
-; |CPU                                      ; 492 (0)             ; 94 (0)                    ; 65536             ; 0          ; 146  ; 0            ; |CPU                                                                               ; CPU                ; work         ;
+; |CPU                                      ; 481 (0)             ; 94 (0)                    ; 65536             ; 0          ; 146  ; 0            ; |CPU                                                                               ; CPU                ; work         ;
 ;    |DataRAM:inst|                         ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |CPU|DataRAM:inst                                                                  ; DataRAM            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |CPU|DataRAM:inst|altsyncram:altsyncram_component                                  ; altsyncram         ; work         ;
 ;          |altsyncram_b0p1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768             ; 0          ; 0    ; 0            ; |CPU|DataRAM:inst|altsyncram:altsyncram_component|altsyncram_b0p1:auto_generated   ; altsyncram_b0p1    ; work         ;
@@ -303,9 +303,6 @@ https://fpgasoftware.intel.com/eula.
 ;    |busmux:inst16|                        ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|busmux:inst16                                                                 ; busmux             ; work         ;
 ;       |lpm_mux:$00000|                    ; 5 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|busmux:inst16|lpm_mux:$00000                                                  ; lpm_mux            ; work         ;
 ;          |mux_flc:auto_generated|         ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|busmux:inst16|lpm_mux:$00000|mux_flc:auto_generated                           ; mux_flc            ; work         ;
-;    |busmux:inst5|                         ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|busmux:inst5                                                                  ; busmux             ; work         ;
-;       |lpm_mux:$00000|                    ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|busmux:inst5|lpm_mux:$00000                                                   ; lpm_mux            ; work         ;
-;          |mux_alc:auto_generated|         ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|busmux:inst5|lpm_mux:$00000|mux_alc:auto_generated                            ; mux_alc            ; work         ;
 ;    |busmux:inst6|                         ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|busmux:inst6                                                                  ; busmux             ; work         ;
 ;       |lpm_mux:$00000|                    ; 11 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|busmux:inst6|lpm_mux:$00000                                                   ; lpm_mux            ; work         ;
 ;          |mux_alc:auto_generated|         ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |CPU|busmux:inst6|lpm_mux:$00000|mux_alc:auto_generated                            ; mux_alc            ; work         ;
@@ -375,14 +372,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; top:inst10|alu:inst6|alusum[8]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
 ; top:inst10|alu:inst6|alusum[7]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
 ; top:inst10|alu:inst6|alusum[6]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
-; top:inst10|alu:inst6|alusum[5]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
 ; top:inst10|alu:inst6|alusum[4]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
 ; top:inst10|alu:inst6|alusum[3]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
 ; top:inst10|alu:inst6|alusum[2]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
+; top:inst10|alu:inst6|alusum[1]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
 ; top:inst10|alu:inst6|alusum[0]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
 ; top:inst10|alu:inst6|alusum[15]                     ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
 ; top:inst10|alu:inst6|alusum[14]                     ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
-; top:inst10|alu:inst6|alusum[1]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
+; top:inst10|alu:inst6|alusum[5]                      ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
 ; top:inst10|alu:inst6|alusum[16]                     ; top:inst10|alu:inst6|WideOr0 ; yes                    ;
 ; Number of user-specified and inferred latches = 17  ;                              ;                        ;
 +-----------------------------------------------------+------------------------------+------------------------+
@@ -419,15 +416,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|Registers:inst|fourinputbusmux:inst2|out[0]                              ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|Registers:inst|fourinputbusmux:inst3|out[7]                              ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|Registers:inst|fourinputbusmux:inst2|out[4]                              ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|Registers:inst|fourinputbusmux:inst3|out[12]                             ;
 ; 4:1                ; 9 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|alu:inst6|ShiftRight0                                                    ;
 ; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|Registers:inst|fourinputbusmux:inst|out[13]                              ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|busmux:inst3|lpm_mux:$00000|mux_flc:auto_generated|l1_w11_n0_mux_dataout ;
-; 5:1                ; 11 bits   ; 33 LEs        ; 33 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|busmux:inst3|lpm_mux:$00000|mux_flc:auto_generated|l1_w9_n0_mux_dataout  ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|alu:inst6|Selector2                                                      ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |CPU|top:inst10|alu:inst6|Selector6                                                      ;
-; 9:1                ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|alu:inst6|Selector13                                                     ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|busmux:inst3|lpm_mux:$00000|mux_flc:auto_generated|l1_w15_n0_mux_dataout ;
+; 5:1                ; 11 bits   ; 33 LEs        ; 33 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|busmux:inst3|lpm_mux:$00000|mux_flc:auto_generated|l1_w8_n0_mux_dataout  ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|alu:inst6|Selector4                                                      ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 20 LEs               ; 4 LEs                  ; No         ; |CPU|top:inst10|alu:inst6|Selector8                                                      ;
+; 9:1                ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|alu:inst6|Selector11                                                     ;
 ; 12:1               ; 3 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |CPU|top:inst10|alu:inst6|Selector16                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
 
@@ -742,16 +739,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: BUSMUX:inst5 ;
-+----------------+-------+----------------------------------+
-; Parameter Name ; Value ; Type                             ;
-+----------------+-------+----------------------------------+
-; WIDTH          ; 11    ; Signed Integer                   ;
-+----------------+-------+----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-----------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: LPM_COUNTER:PC     ;
 +------------------------+-------------------+--------------------+
@@ -857,7 +844,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 81                          ;
 ;     ENA SLD           ; 11                          ;
 ;     plain             ; 2                           ;
-; arriav_lcell_comb     ; 493                         ;
+; arriav_lcell_comb     ; 482                         ;
 ;     arith             ; 212                         ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 74                          ;
@@ -865,10 +852,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 69                          ;
 ;     extend            ; 5                           ;
 ;         7 data inputs ; 5                           ;
-;     normal            ; 245                         ;
+;     normal            ; 234                         ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 13                          ;
-;         3 data inputs ; 65                          ;
+;         3 data inputs ; 54                          ;
 ;         4 data inputs ; 16                          ;
 ;         5 data inputs ; 43                          ;
 ;         6 data inputs ; 107                         ;
@@ -879,7 +866,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; stratixv_ram_block    ; 32                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.60                        ;
-; Average LUT depth     ; 5.69                        ;
+; Average LUT depth     ; 5.70                        ;
 +-----------------------+-----------------------------+
 
 
@@ -888,7 +875,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -898,7 +885,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu Jun 04 23:41:02 2020
+    Info: Processing started: Sun Jun 07 19:12:38 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -956,6 +943,7 @@ Warning (12125): Using design file dff3.bdf, which is not specified as a design 
 Info (12128): Elaborating entity "DFF3" for hierarchy "StateMachine:inst1|DFF3:inst"
 Info (12128): Elaborating entity "nxt" for hierarchy "StateMachine:inst1|nxt:inst2"
 Info (12128): Elaborating entity "decoder" for hierarchy "decoder:inst4"
+Warning (10034): Output port "empty" at decoder.v(14) has no driver File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/decoder.v Line: 14
 Info (12128): Elaborating entity "equal" for hierarchy "equal:inst18"
 Info (12128): Elaborating entity "top" for hierarchy "top:inst10"
 Info (12128): Elaborating entity "LPM_DFF" for hierarchy "top:inst10|LPM_DFF:CARRY"
@@ -1058,17 +1046,6 @@ Info (12133): Instantiated megafunction "DataRAM:inst|altsyncram:altsyncram_comp
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b0p1.tdf
     Info (12023): Found entity 1: altsyncram_b0p1 File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_b0p1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_b0p1" for hierarchy "DataRAM:inst|altsyncram:altsyncram_component|altsyncram_b0p1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (113031): 10 out of 2048 addresses are reinitialized. The latest initialized data will replace the existing data. There are 10 warnings found, and 10 warnings are reported. File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/list_setup.mif Line: 1
-    Warning (113030): Memory Initialization File address 0 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 10
-    Warning (113030): Memory Initialization File address 1 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 11
-    Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 12
-    Warning (113030): Memory Initialization File address 3 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 13
-    Warning (113030): Memory Initialization File address 4 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 14
-    Warning (113030): Memory Initialization File address 5 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 15
-    Warning (113030): Memory Initialization File address 6 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 16
-    Warning (113030): Memory Initialization File address 7 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 17
-    Warning (113030): Memory Initialization File address 8 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 18
-    Warning (113030): Memory Initialization File address 9 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 19
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst6"
 Info (12130): Elaborated megafunction instantiation "BUSMUX:inst6"
 Info (12133): Instantiated megafunction "BUSMUX:inst6" with the following parameter:
@@ -1100,17 +1077,6 @@ Info (12133): Instantiated megafunction "RAMinstr:inst2|altsyncram:altsyncram_co
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_rbo1.tdf
     Info (12023): Found entity 1: altsyncram_rbo1 File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 28
 Info (12128): Elaborating entity "altsyncram_rbo1" for hierarchy "RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Warning (113031): 12 out of 2048 addresses are reinitialized. The latest initialized data will replace the existing data. There are 12 warnings found, and 10 warnings are reported. File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/list.mif Line: 1
-    Warning (113030): Memory Initialization File address 0 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 10
-    Warning (113030): Memory Initialization File address 1 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 11
-    Warning (113030): Memory Initialization File address 2 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 12
-    Warning (113030): Memory Initialization File address 3 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 13
-    Warning (113030): Memory Initialization File address 4 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 14
-    Warning (113030): Memory Initialization File address 5 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 15
-    Warning (113030): Memory Initialization File address 6 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 16
-    Warning (113030): Memory Initialization File address 7 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 17
-    Warning (113030): Memory Initialization File address 8 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 18
-    Warning (113030): Memory Initialization File address 9 is reinitialized File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/ Line: 19
 Info (12128): Elaborating entity "LPM_COUNTER" for hierarchy "LPM_COUNTER:PC"
 Info (12130): Elaborated megafunction instantiation "LPM_COUNTER:PC"
 Info (12133): Instantiated megafunction "LPM_COUNTER:PC" with the following parameter:
@@ -1147,13 +1113,13 @@ Warning (13012): Latch top:inst10|alu:inst6|alusum[7] has unsafe behavior File: 
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
 Warning (13012): Latch top:inst10|alu:inst6|alusum[6] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[5] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
 Warning (13012): Latch top:inst10|alu:inst6|alusum[4] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
 Warning (13012): Latch top:inst10|alu:inst6|alusum[3] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
 Warning (13012): Latch top:inst10|alu:inst6|alusum[2] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[1] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
 Warning (13012): Latch top:inst10|alu:inst6|alusum[0] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[11] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
@@ -1161,22 +1127,22 @@ Warning (13012): Latch top:inst10|alu:inst6|alusum[15] has unsafe behavior File:
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
 Warning (13012): Latch top:inst10|alu:inst6|alusum[14] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[1] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
+Warning (13012): Latch top:inst10|alu:inst6|alusum[5] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
 Warning (13012): Latch top:inst10|alu:inst6|alusum[16] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/alu.v Line: 67
     Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_rbo1:auto_generated|q_a[11] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/db/altsyncram_rbo1.tdf Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 751 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 740 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 129 output pins
-    Info (21061): Implemented 573 logic cells
+    Info (21061): Implemented 562 logic cells
     Info (21064): Implemented 32 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 89 warnings
-    Info: Peak virtual memory: 4857 megabytes
-    Info: Processing ended: Thu Jun 04 23:41:13 2020
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 68 warnings
+    Info: Peak virtual memory: 4875 megabytes
+    Info: Processing ended: Sun Jun 07 19:13:01 2020
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:39
 
 
