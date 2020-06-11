@@ -1,0 +1,12 @@
+Power Analyzer Status : Successful - Thu Jun 11 21:02:10 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : CPU
+Top-level Entity Name : CPU
+Family : Cyclone IV E
+Device : EP4CE6F17C6
+Power Models : Final
+Total Thermal Power Dissipation : 148.10 mW
+Core Dynamic Thermal Power Dissipation : 16.07 mW
+Core Static Thermal Power Dissipation : 43.04 mW
+I/O Thermal Power Dissipation : 88.99 mW
+Power Estimation Confidence : Low: user provided insufficient toggle rate data
