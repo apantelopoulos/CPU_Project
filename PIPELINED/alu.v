@@ -1,3 +1,4 @@
+
 module alu
 (
 input [15:0] instr,
@@ -59,9 +60,6 @@ assign carryen = exec1&carrynbl;
 assign wenout = exec1&regwork&~(instr[15]&instr[14]&instr[13]&instr[12]&instr[11]&instr[10]&~instr[9]&instr[8]);
 
 
-
-
-
 always @(*)
 	begin
 		case (op)
@@ -103,4 +101,7 @@ assign aluout = alusum [15:0];
 
 	
 endmodule
+
+
+
 	

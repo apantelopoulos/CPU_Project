@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Thu Jun 11 17:08:55 2020
+Mon Jun 15 01:02:10 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -19,8 +19,8 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  11. Registers Removed During Synthesis
  12. General Register Statistics
  13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for DataRAM:inst|altsyncram:altsyncram_component|altsyncram_h9g1:auto_generated
- 15. Source assignments for RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated
+ 14. Source assignments for DataRAM:inst|altsyncram:altsyncram_component|altsyncram_tjk1:auto_generated
+ 15. Source assignments for RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated
  16. Parameter Settings for User Entity Instance: top:inst10|LPM_DFF:CARRY
  17. Parameter Settings for User Entity Instance: top:inst10|Registers:inst|LPM_FF:inst4
  18. Parameter Settings for User Entity Instance: top:inst10|Registers:inst|LPM_FF:inst5
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 11 17:08:55 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Jun 15 01:02:10 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; CPU                                         ;
 ; Top-level Entity Name              ; CPU                                         ;
@@ -187,66 +187,67 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
-; decoder.v                        ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/decoder.v              ;         ;
-; CPU.bdf                          ; yes             ; User Block Diagram/Schematic File        ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/CPU.bdf                ;         ;
-; nxt.v                            ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/nxt.v                  ;         ;
-; out.v                            ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/out.v                  ;         ;
-; StateMachine.bdf                 ; yes             ; User Block Diagram/Schematic File        ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/StateMachine.bdf       ;         ;
-; Registers.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/Registers.bdf          ;         ;
-; 4input_bus_mux.v                 ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/4input_bus_mux.v       ;         ;
-; WriteEnableDecoder.v             ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/WriteEnableDecoder.v   ;         ;
-; alu.v                            ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v                  ;         ;
-; top.bdf                          ; yes             ; User Block Diagram/Schematic File        ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/top.bdf                ;         ;
-; sxtn2lvn.v                       ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/sxtn2lvn.v             ;         ;
-; lvn2sxtn.v                       ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/lvn2sxtn.v             ;         ;
-; equal.v                          ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/equal.v                ;         ;
-; plsone.v                         ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/plsone.v               ;         ;
-; RAMinstr.v                       ; yes             ; User Wizard-Generated File               ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/RAMinstr.v             ;         ;
-; DataRAM.v                        ; yes             ; User Wizard-Generated File               ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/DataRAM.v              ;         ;
-; pplsplus.v                       ; yes             ; User Verilog HDL File                    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/pplsplus.v             ;         ;
-; dff3.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/dff3.bdf               ;         ;
-; lpm_dff.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_dff.tdf              ;         ;
-; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_constant.inc         ;         ;
-; dffeea.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/dffeea.inc               ;         ;
-; aglobal191.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc           ;         ;
-; lpm_ff.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_ff.tdf               ;         ;
-; busmux.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/busmux.tdf               ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc              ;         ;
-; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.tdf              ;         ;
-; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/muxlut.inc               ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/bypassff.inc             ;         ;
-; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altshift.inc             ;         ;
-; db/mux_tsc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/mux_tsc.tdf         ;         ;
-; db/mux_8rc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/mux_8rc.tdf         ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf           ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc    ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc           ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc            ;         ;
-; altrom.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc               ;         ;
-; altram.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc               ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc             ;         ;
-; db/altsyncram_h9g1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_h9g1.tdf ;         ;
-; db/mux_osc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/mux_osc.tdf         ;         ;
-; db/altsyncram_dki1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf ;         ;
-; fibonacci.mif                    ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/fibonacci.mif          ;         ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_counter.tdf          ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_add_sub.inc          ;         ;
-; cmpconst.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/cmpconst.inc             ;         ;
-; lpm_compare.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_compare.inc          ;         ;
-; lpm_counter.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_counter.inc          ;         ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/alt_counter_stratix.inc  ;         ;
-; db/cntr_sej.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/cntr_sej.tdf        ;         ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_add_sub.tdf          ;         ;
-; addcore.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/addcore.inc              ;         ;
-; look_add.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/look_add.inc             ;         ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc  ;         ;
-; db/add_sub_1bc.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/add_sub_1bc.tdf     ;         ;
-+----------------------------------+-----------------+------------------------------------------+---------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                                                                                                                ; Library ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
+; decoder.v                        ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/decoder.v                        ;         ;
+; CPU.bdf                          ; yes             ; User Block Diagram/Schematic File        ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/CPU.bdf                          ;         ;
+; nxt.v                            ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/nxt.v                            ;         ;
+; out.v                            ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/out.v                            ;         ;
+; StateMachine.bdf                 ; yes             ; User Block Diagram/Schematic File        ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/StateMachine.bdf                 ;         ;
+; Registers.bdf                    ; yes             ; User Block Diagram/Schematic File        ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/Registers.bdf                    ;         ;
+; 4input_bus_mux.v                 ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/4input_bus_mux.v                 ;         ;
+; WriteEnableDecoder.v             ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/WriteEnableDecoder.v             ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v                            ;         ;
+; top.bdf                          ; yes             ; User Block Diagram/Schematic File        ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/top.bdf                          ;         ;
+; sxtn2lvn.v                       ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/sxtn2lvn.v                       ;         ;
+; lvn2sxtn.v                       ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/lvn2sxtn.v                       ;         ;
+; equal.v                          ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/equal.v                          ;         ;
+; plsone.v                         ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/plsone.v                         ;         ;
+; RAMinstr.v                       ; yes             ; User Wizard-Generated File               ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/RAMinstr.v                       ;         ;
+; DataRAM.v                        ; yes             ; User Wizard-Generated File               ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/DataRAM.v                        ;         ;
+; pplsplus.v                       ; yes             ; User Verilog HDL File                    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/pplsplus.v                       ;         ;
+; dff3.bdf                         ; yes             ; Auto-Found Block Diagram/Schematic File  ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/dff3.bdf                         ;         ;
+; lpm_dff.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_dff.tdf                                                                                          ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_constant.inc                                                                                     ;         ;
+; dffeea.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/dffeea.inc                                                                                           ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc                                                                                       ;         ;
+; lpm_ff.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_ff.tdf                                                                                           ;         ;
+; busmux.tdf                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/busmux.tdf                                                                                           ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc                                                                                          ;         ;
+; lpm_mux.tdf                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.tdf                                                                                          ;         ;
+; muxlut.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/muxlut.inc                                                                                           ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/bypassff.inc                                                                                         ;         ;
+; altshift.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altshift.inc                                                                                         ;         ;
+; db/mux_tsc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/mux_tsc.tdf                   ;         ;
+; db/mux_8rc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/mux_8rc.tdf                   ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf                                                                                       ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                                                                ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc                                                                                       ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                                                        ;         ;
+; altrom.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altrom.inc                                                                                           ;         ;
+; altram.inc                       ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altram.inc                                                                                           ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altdpram.inc                                                                                         ;         ;
+; db/altsyncram_tjk1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_tjk1.tdf           ;         ;
+; pseudo-random_integers_setup.mif ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/pseudo-random_integers_setup.mif ;         ;
+; db/mux_osc.tdf                   ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/mux_osc.tdf                   ;         ;
+; db/altsyncram_dvj1.tdf           ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf           ;         ;
+; pseudo-random_integers.mif       ; yes             ; Auto-Found Memory Initialization File    ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/pseudo-random_integers.mif       ;         ;
+; lpm_counter.tdf                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_counter.tdf                                                                                      ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                                                      ;         ;
+; cmpconst.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/cmpconst.inc                                                                                         ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_compare.inc                                                                                      ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_counter.inc                                                                                      ;         ;
+; alt_counter_stratix.inc          ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                                                                              ;         ;
+; db/cntr_sej.tdf                  ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/cntr_sej.tdf                  ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_add_sub.tdf                                                                                      ;         ;
+; addcore.inc                      ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/addcore.inc                                                                                          ;         ;
+; look_add.inc                     ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/look_add.inc                                                                                         ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                             ; c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                                                              ;         ;
+; db/add_sub_1bc.tdf               ; yes             ; Auto-Generated Megafunction              ; C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/add_sub_1bc.tdf               ;         ;
++----------------------------------+-----------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -290,10 +291,10 @@ https://fpgasoftware.intel.com/eula.
 ; |CPU                                      ; 788 (0)             ; 94 (0)                    ; 65536       ; 0            ; 0       ; 0         ; 146  ; 0            ; |CPU                                                                               ; CPU                ; work         ;
 ;    |DataRAM:inst|                         ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DataRAM:inst                                                                  ; DataRAM            ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DataRAM:inst|altsyncram:altsyncram_component                                  ; altsyncram         ; work         ;
-;          |altsyncram_h9g1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DataRAM:inst|altsyncram:altsyncram_component|altsyncram_h9g1:auto_generated   ; altsyncram_h9g1    ; work         ;
+;          |altsyncram_tjk1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|DataRAM:inst|altsyncram:altsyncram_component|altsyncram_tjk1:auto_generated   ; altsyncram_tjk1    ; work         ;
 ;    |RAMinstr:inst2|                       ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|RAMinstr:inst2                                                                ; RAMinstr           ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|RAMinstr:inst2|altsyncram:altsyncram_component                                ; altsyncram         ; work         ;
-;          |altsyncram_dki1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated ; altsyncram_dki1    ; work         ;
+;          |altsyncram_dvj1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 32768       ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated ; altsyncram_dvj1    ; work         ;
 ;    |StateMachine:inst12|                  ; 7 (0)               ; 2 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|StateMachine:inst12                                                           ; StateMachine       ; work         ;
 ;       |DFF3:inst|                         ; 0 (0)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|StateMachine:inst12|DFF3:inst                                                 ; DFF3               ; work         ;
 ;       |nxt:inst1|                         ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CPU|StateMachine:inst12|nxt:inst1                                                 ; nxt                ; work         ;
@@ -338,14 +339,14 @@ https://fpgasoftware.intel.com/eula.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                  ;
-+------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------------+
-; Name                                                                                     ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF           ;
-+------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------------+
-; DataRAM:inst|altsyncram:altsyncram_component|altsyncram_h9g1:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; None          ;
-; RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; fibonacci.mif ;
-+------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+---------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                     ;
++------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
+; Name                                                                                     ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF                              ;
++------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
+; DataRAM:inst|altsyncram:altsyncram_component|altsyncram_tjk1:auto_generated|ALTSYNCRAM   ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; pseudo-random_integers_setup.mif ;
+; RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 2048         ; 16           ; --           ; --           ; 32768 ; pseudo-random_integers.mif       ;
++------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+-------+----------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------+
@@ -427,7 +428,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +----------------------------------------------------------------------------------------------------+
-; Source assignments for DataRAM:inst|altsyncram:altsyncram_component|altsyncram_h9g1:auto_generated ;
+; Source assignments for DataRAM:inst|altsyncram:altsyncram_component|altsyncram_tjk1:auto_generated ;
 +---------------------------------+--------------------+------+--------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                   ;
 +---------------------------------+--------------------+------+--------------------------------------+
@@ -436,7 +437,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 
 +------------------------------------------------------------------------------------------------------+
-; Source assignments for RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated ;
+; Source assignments for RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated ;
 +---------------------------------+--------------------+------+----------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                     ;
 +---------------------------------+--------------------+------+----------------------------------------+
@@ -606,62 +607,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +-------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: DataRAM:inst|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+-------------------------------+
-; Parameter Name                     ; Value                ; Type                          ;
-+------------------------------------+----------------------+-------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
-; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                       ;
-; WIDTH_A                            ; 16                   ; Signed Integer                ;
-; WIDTHAD_A                          ; 11                   ; Signed Integer                ;
-; NUMWORDS_A                         ; 2048                 ; Signed Integer                ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                       ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
-; WIDTH_B                            ; 1                    ; Untyped                       ;
-; WIDTHAD_B                          ; 1                    ; Untyped                       ;
-; NUMWORDS_B                         ; 1                    ; Untyped                       ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                       ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                       ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                       ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                       ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                       ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
-; BYTE_SIZE                          ; 8                    ; Untyped                       ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                       ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
-; INIT_FILE                          ; UNUSED               ; Untyped                       ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                       ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                       ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                       ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                       ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                       ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                       ;
-; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                       ;
-; CBXI_PARAMETER                     ; altsyncram_h9g1      ; Untyped                       ;
-+------------------------------------+----------------------+-------------------------------+
++------------------------------------+----------------------------------+-------------------+
+; Parameter Name                     ; Value                            ; Type              ;
++------------------------------------+----------------------------------+-------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                ; Untyped           ;
+; AUTO_CARRY_CHAINS                  ; ON                               ; AUTO_CARRY        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                              ; IGNORE_CARRY      ;
+; AUTO_CASCADE_CHAINS                ; ON                               ; AUTO_CASCADE      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                              ; IGNORE_CASCADE    ;
+; WIDTH_BYTEENA                      ; 1                                ; Untyped           ;
+; OPERATION_MODE                     ; SINGLE_PORT                      ; Untyped           ;
+; WIDTH_A                            ; 16                               ; Signed Integer    ;
+; WIDTHAD_A                          ; 11                               ; Signed Integer    ;
+; NUMWORDS_A                         ; 2048                             ; Signed Integer    ;
+; OUTDATA_REG_A                      ; UNREGISTERED                     ; Untyped           ;
+; ADDRESS_ACLR_A                     ; NONE                             ; Untyped           ;
+; OUTDATA_ACLR_A                     ; NONE                             ; Untyped           ;
+; WRCONTROL_ACLR_A                   ; NONE                             ; Untyped           ;
+; INDATA_ACLR_A                      ; NONE                             ; Untyped           ;
+; BYTEENA_ACLR_A                     ; NONE                             ; Untyped           ;
+; WIDTH_B                            ; 1                                ; Untyped           ;
+; WIDTHAD_B                          ; 1                                ; Untyped           ;
+; NUMWORDS_B                         ; 1                                ; Untyped           ;
+; INDATA_REG_B                       ; CLOCK1                           ; Untyped           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                           ; Untyped           ;
+; RDCONTROL_REG_B                    ; CLOCK1                           ; Untyped           ;
+; ADDRESS_REG_B                      ; CLOCK1                           ; Untyped           ;
+; OUTDATA_REG_B                      ; UNREGISTERED                     ; Untyped           ;
+; BYTEENA_REG_B                      ; CLOCK1                           ; Untyped           ;
+; INDATA_ACLR_B                      ; NONE                             ; Untyped           ;
+; WRCONTROL_ACLR_B                   ; NONE                             ; Untyped           ;
+; ADDRESS_ACLR_B                     ; NONE                             ; Untyped           ;
+; OUTDATA_ACLR_B                     ; NONE                             ; Untyped           ;
+; RDCONTROL_ACLR_B                   ; NONE                             ; Untyped           ;
+; BYTEENA_ACLR_B                     ; NONE                             ; Untyped           ;
+; WIDTH_BYTEENA_A                    ; 1                                ; Signed Integer    ;
+; WIDTH_BYTEENA_B                    ; 1                                ; Untyped           ;
+; RAM_BLOCK_TYPE                     ; AUTO                             ; Untyped           ;
+; BYTE_SIZE                          ; 8                                ; Untyped           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                        ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ             ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ             ; Untyped           ;
+; INIT_FILE                          ; pseudo-random_integers_setup.mif ; Untyped           ;
+; INIT_FILE_LAYOUT                   ; PORT_A                           ; Untyped           ;
+; MAXIMUM_DEPTH                      ; 0                                ; Untyped           ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                           ; Untyped           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                           ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                           ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                           ; Untyped           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                  ; Untyped           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                  ; Untyped           ;
+; ENABLE_ECC                         ; FALSE                            ; Untyped           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                            ; Untyped           ;
+; WIDTH_ECCSTATUS                    ; 3                                ; Untyped           ;
+; DEVICE_FAMILY                      ; Cyclone IV E                     ; Untyped           ;
+; CBXI_PARAMETER                     ; altsyncram_tjk1                  ; Untyped           ;
++------------------------------------+----------------------------------+-------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -677,62 +678,62 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +---------------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: RAMinstr:inst2|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+---------------------------------+
-; Parameter Name                     ; Value                ; Type                            ;
-+------------------------------------+----------------------+---------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                         ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                      ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                    ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                    ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                  ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                         ;
-; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                         ;
-; WIDTH_A                            ; 16                   ; Signed Integer                  ;
-; WIDTHAD_A                          ; 11                   ; Signed Integer                  ;
-; NUMWORDS_A                         ; 2048                 ; Signed Integer                  ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                         ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                         ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                         ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                         ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                         ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                         ;
-; WIDTH_B                            ; 1                    ; Untyped                         ;
-; WIDTHAD_B                          ; 1                    ; Untyped                         ;
-; NUMWORDS_B                         ; 1                    ; Untyped                         ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                         ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                         ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                         ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                         ;
-; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                         ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                         ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                         ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                         ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                         ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                         ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                         ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                         ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                  ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                         ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                         ;
-; BYTE_SIZE                          ; 8                    ; Untyped                         ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                         ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                         ;
-; INIT_FILE                          ; fibonacci.mif        ; Untyped                         ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                         ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                         ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                         ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                         ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                         ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                         ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                         ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                         ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                         ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                         ;
-; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                         ;
-; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                         ;
-; CBXI_PARAMETER                     ; altsyncram_dki1      ; Untyped                         ;
-+------------------------------------+----------------------+---------------------------------+
++------------------------------------+----------------------------+---------------------------+
+; Parameter Name                     ; Value                      ; Type                      ;
++------------------------------------+----------------------------+---------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                          ; Untyped                   ;
+; AUTO_CARRY_CHAINS                  ; ON                         ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                        ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                ; ON                         ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                        ; IGNORE_CASCADE            ;
+; WIDTH_BYTEENA                      ; 1                          ; Untyped                   ;
+; OPERATION_MODE                     ; SINGLE_PORT                ; Untyped                   ;
+; WIDTH_A                            ; 16                         ; Signed Integer            ;
+; WIDTHAD_A                          ; 11                         ; Signed Integer            ;
+; NUMWORDS_A                         ; 2048                       ; Signed Integer            ;
+; OUTDATA_REG_A                      ; UNREGISTERED               ; Untyped                   ;
+; ADDRESS_ACLR_A                     ; NONE                       ; Untyped                   ;
+; OUTDATA_ACLR_A                     ; NONE                       ; Untyped                   ;
+; WRCONTROL_ACLR_A                   ; NONE                       ; Untyped                   ;
+; INDATA_ACLR_A                      ; NONE                       ; Untyped                   ;
+; BYTEENA_ACLR_A                     ; NONE                       ; Untyped                   ;
+; WIDTH_B                            ; 1                          ; Untyped                   ;
+; WIDTHAD_B                          ; 1                          ; Untyped                   ;
+; NUMWORDS_B                         ; 1                          ; Untyped                   ;
+; INDATA_REG_B                       ; CLOCK1                     ; Untyped                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                     ; Untyped                   ;
+; RDCONTROL_REG_B                    ; CLOCK1                     ; Untyped                   ;
+; ADDRESS_REG_B                      ; CLOCK1                     ; Untyped                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED               ; Untyped                   ;
+; BYTEENA_REG_B                      ; CLOCK1                     ; Untyped                   ;
+; INDATA_ACLR_B                      ; NONE                       ; Untyped                   ;
+; WRCONTROL_ACLR_B                   ; NONE                       ; Untyped                   ;
+; ADDRESS_ACLR_B                     ; NONE                       ; Untyped                   ;
+; OUTDATA_ACLR_B                     ; NONE                       ; Untyped                   ;
+; RDCONTROL_ACLR_B                   ; NONE                       ; Untyped                   ;
+; BYTEENA_ACLR_B                     ; NONE                       ; Untyped                   ;
+; WIDTH_BYTEENA_A                    ; 1                          ; Signed Integer            ;
+; WIDTH_BYTEENA_B                    ; 1                          ; Untyped                   ;
+; RAM_BLOCK_TYPE                     ; AUTO                       ; Untyped                   ;
+; BYTE_SIZE                          ; 8                          ; Untyped                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                  ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ       ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ       ; Untyped                   ;
+; INIT_FILE                          ; pseudo-random_integers.mif ; Untyped                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A                     ; Untyped                   ;
+; MAXIMUM_DEPTH                      ; 0                          ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                     ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                     ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                     ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                     ; Untyped                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN            ; Untyped                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN            ; Untyped                   ;
+; ENABLE_ECC                         ; FALSE                      ; Untyped                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                      ; Untyped                   ;
+; WIDTH_ECCSTATUS                    ; 3                          ; Untyped                   ;
+; DEVICE_FAMILY                      ; Cyclone IV E               ; Untyped                   ;
+; CBXI_PARAMETER                     ; altsyncram_dvj1            ; Untyped                   ;
++------------------------------------+----------------------------+---------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -864,7 +865,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -874,54 +875,54 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Thu Jun 11 17:08:44 2020
+    Info: Processing started: Mon Jun 15 01:01:46 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file ramdata.v
-    Info (12023): Found entity 1: RAMdata File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/RAMdata.v Line: 40
+    Info (12023): Found entity 1: RAMdata File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/RAMdata.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file rominstructions.v
-    Info (12023): Found entity 1: ROMinstructions File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/ROMinstructions.v Line: 40
+    Info (12023): Found entity 1: ROMinstructions File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/ROMinstructions.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file decoder.v
-    Info (12023): Found entity 1: decoder File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/decoder.v Line: 1
+    Info (12023): Found entity 1: decoder File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/decoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file cpu.bdf
     Info (12023): Found entity 1: CPU
 Info (12021): Found 1 design units, including 1 entities, in source file nxt.v
-    Info (12023): Found entity 1: nxt File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/nxt.v Line: 1
+    Info (12023): Found entity 1: nxt File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/nxt.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file out.v
-    Info (12023): Found entity 1: out File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/out.v Line: 1
+    Info (12023): Found entity 1: out File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/out.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file statemachine.bdf
     Info (12023): Found entity 1: StateMachine
 Info (12021): Found 1 design units, including 1 entities, in source file registers.bdf
     Info (12023): Found entity 1: Registers
 Info (12021): Found 1 design units, including 1 entities, in source file 4input_bus_mux.v
-    Info (12023): Found entity 1: fourinputbusmux File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/4input_bus_mux.v Line: 1
+    Info (12023): Found entity 1: fourinputbusmux File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/4input_bus_mux.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file 4input_mux.v
-    Info (12023): Found entity 1: fourinputmux File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/4input_mux.v Line: 1
+    Info (12023): Found entity 1: fourinputmux File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/4input_mux.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file writeenabledecoder.v
-    Info (12023): Found entity 1: writeenabledecoder File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/WriteEnableDecoder.v Line: 1
+    Info (12023): Found entity 1: writeenabledecoder File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/WriteEnableDecoder.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
-    Info (12023): Found entity 1: alu File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 1
+    Info (12023): Found entity 1: alu File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file top.bdf
     Info (12023): Found entity 1: top
 Info (12021): Found 1 design units, including 1 entities, in source file twlv2sxtn.v
-    Info (12023): Found entity 1: twlv2sxtn File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/twlv2sxtn.v Line: 1
+    Info (12023): Found entity 1: twlv2sxtn File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/twlv2sxtn.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sxtn2lvn.v
-    Info (12023): Found entity 1: sxtn2lvn File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/sxtn2lvn.v Line: 1
+    Info (12023): Found entity 1: sxtn2lvn File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/sxtn2lvn.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file lvn2sxtn.v
-    Info (12023): Found entity 1: lvn2sxtn File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/lvn2sxtn.v Line: 1
+    Info (12023): Found entity 1: lvn2sxtn File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/lvn2sxtn.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file equal.v
-    Info (12023): Found entity 1: equal File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/equal.v Line: 1
+    Info (12023): Found entity 1: equal File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/equal.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file zero.v
-    Info (12023): Found entity 1: zero File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/zero.v Line: 1
+    Info (12023): Found entity 1: zero File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/zero.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file plsone.v
-    Info (12023): Found entity 1: plsone File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/plsone.v Line: 1
+    Info (12023): Found entity 1: plsone File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/plsone.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file raminstr.v
-    Info (12023): Found entity 1: RAMinstr File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/RAMinstr.v Line: 40
+    Info (12023): Found entity 1: RAMinstr File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/RAMinstr.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file dataram.v
-    Info (12023): Found entity 1: DataRAM File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/DataRAM.v Line: 40
+    Info (12023): Found entity 1: DataRAM File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/DataRAM.v Line: 40
 Info (12021): Found 1 design units, including 1 entities, in source file pplsplus.v
-    Info (12023): Found entity 1: pplplus File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/pplsplus.v Line: 1
+    Info (12023): Found entity 1: pplplus File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/pplsplus.v Line: 1
 Info (12127): Elaborating entity "CPU" for the top level hierarchy
 Warning (275004): Undeclared parameter UP
 Warning (275006): Can't find a definition for parameter LPM_DIRECTION -- assuming UP was intended to be a quoted string
@@ -934,7 +935,7 @@ Warning (12125): Using design file dff3.bdf, which is not specified as a design 
 Info (12128): Elaborating entity "DFF3" for hierarchy "StateMachine:inst12|DFF3:inst"
 Info (12128): Elaborating entity "nxt" for hierarchy "StateMachine:inst12|nxt:inst1"
 Info (12128): Elaborating entity "decoder" for hierarchy "decoder:inst4"
-Warning (10034): Output port "empty" at decoder.v(14) has no driver File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/decoder.v Line: 14
+Warning (10034): Output port "empty" at decoder.v(14) has no driver File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/decoder.v Line: 14
 Info (12128): Elaborating entity "equal" for hierarchy "equal:inst18"
 Info (12128): Elaborating entity "top" for hierarchy "top:inst10"
 Info (12128): Elaborating entity "LPM_DFF" for hierarchy "top:inst10|LPM_DFF:CARRY"
@@ -942,45 +943,45 @@ Info (12130): Elaborated megafunction instantiation "top:inst10|LPM_DFF:CARRY"
 Info (12133): Instantiated megafunction "top:inst10|LPM_DFF:CARRY" with the following parameter:
     Info (12134): Parameter "LPM_WIDTH" = "1"
 Info (12128): Elaborating entity "alu" for hierarchy "top:inst10|alu:inst6"
-Warning (10230): Verilog HDL assignment warning at alu.v(46): truncated value with size 32 to match size of target (1) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 46
-Warning (10230): Verilog HDL assignment warning at alu.v(71): truncated value with size 32 to match size of target (17) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 71
-Warning (10230): Verilog HDL assignment warning at alu.v(72): truncated value with size 32 to match size of target (17) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 72
-Warning (10270): Verilog HDL Case Statement warning at alu.v(67): incomplete case statement has no default case item File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "alusum", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul0", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul1", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul2", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul3", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul4", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul5", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul6", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul7", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul8", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul9", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul10", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul11", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul12", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul13", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul14", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul15", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Warning (10240): Verilog HDL Always Construct warning at alu.v(67): inferring latch(es) for variable "mul", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[0]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[1]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[2]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[3]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[4]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[5]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[6]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[7]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[8]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[9]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[10]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[11]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[12]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[13]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[14]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[15]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-Info (10041): Inferred latch for "alusum[16]" at alu.v(67) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
+Warning (10230): Verilog HDL assignment warning at alu.v(47): truncated value with size 32 to match size of target (1) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 47
+Warning (10230): Verilog HDL assignment warning at alu.v(69): truncated value with size 32 to match size of target (17) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 69
+Warning (10230): Verilog HDL assignment warning at alu.v(70): truncated value with size 32 to match size of target (17) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 70
+Warning (10270): Verilog HDL Case Statement warning at alu.v(65): incomplete case statement has no default case item File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "alusum", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul0", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul1", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul2", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul3", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul4", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul5", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul6", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul7", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul8", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul9", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul10", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul11", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul12", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul13", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul14", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul15", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Warning (10240): Verilog HDL Always Construct warning at alu.v(65): inferring latch(es) for variable "mul", which holds its previous value in one or more paths through the always construct File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[0]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[1]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[2]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[3]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[4]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[5]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[6]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[7]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[8]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[9]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[10]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[11]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[12]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[13]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[14]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[15]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+Info (10041): Inferred latch for "alusum[16]" at alu.v(65) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
 Info (12128): Elaborating entity "Registers" for hierarchy "top:inst10|Registers:inst"
 Info (12128): Elaborating entity "fourinputbusmux" for hierarchy "top:inst10|Registers:inst|fourinputbusmux:inst"
 Info (12128): Elaborating entity "LPM_FF" for hierarchy "top:inst10|Registers:inst|LPM_FF:inst4"
@@ -989,10 +990,10 @@ Info (12133): Instantiated megafunction "top:inst10|Registers:inst|LPM_FF:inst4"
     Info (12134): Parameter "LPM_FFTYPE" = "DFF"
     Info (12134): Parameter "LPM_WIDTH" = "16"
 Info (12128): Elaborating entity "writeenabledecoder" for hierarchy "top:inst10|Registers:inst|writeenabledecoder:inst1"
-Warning (10230): Verilog HDL assignment warning at WriteEnableDecoder.v(12): truncated value with size 32 to match size of target (1) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/WriteEnableDecoder.v Line: 12
-Warning (10230): Verilog HDL assignment warning at WriteEnableDecoder.v(13): truncated value with size 32 to match size of target (1) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/WriteEnableDecoder.v Line: 13
-Warning (10230): Verilog HDL assignment warning at WriteEnableDecoder.v(14): truncated value with size 32 to match size of target (1) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/WriteEnableDecoder.v Line: 14
-Warning (10230): Verilog HDL assignment warning at WriteEnableDecoder.v(15): truncated value with size 32 to match size of target (1) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/WriteEnableDecoder.v Line: 15
+Warning (10230): Verilog HDL assignment warning at WriteEnableDecoder.v(12): truncated value with size 32 to match size of target (1) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/WriteEnableDecoder.v Line: 12
+Warning (10230): Verilog HDL assignment warning at WriteEnableDecoder.v(13): truncated value with size 32 to match size of target (1) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/WriteEnableDecoder.v Line: 13
+Warning (10230): Verilog HDL assignment warning at WriteEnableDecoder.v(14): truncated value with size 32 to match size of target (1) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/WriteEnableDecoder.v Line: 14
+Warning (10230): Verilog HDL assignment warning at WriteEnableDecoder.v(15): truncated value with size 32 to match size of target (1) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/WriteEnableDecoder.v Line: 15
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "top:inst10|BUSMUX:inst3"
 Info (12130): Elaborated megafunction instantiation "top:inst10|BUSMUX:inst3"
 Info (12133): Instantiated megafunction "top:inst10|BUSMUX:inst3" with the following parameter:
@@ -1000,7 +1001,7 @@ Info (12133): Instantiated megafunction "top:inst10|BUSMUX:inst3" with the follo
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "top:inst10|BUSMUX:inst3|lpm_mux:$00000" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12131): Elaborated megafunction instantiation "top:inst10|BUSMUX:inst3|lpm_mux:$00000", which is child of megafunction instantiation "top:inst10|BUSMUX:inst3" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_tsc.tdf
-    Info (12023): Found entity 1: mux_tsc File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/mux_tsc.tdf Line: 23
+    Info (12023): Found entity 1: mux_tsc File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/mux_tsc.tdf Line: 23
 Info (12128): Elaborating entity "mux_tsc" for hierarchy "top:inst10|BUSMUX:inst3|lpm_mux:$00000|mux_tsc:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "top:inst10|BUSMUX:inst4"
 Info (12130): Elaborated megafunction instantiation "top:inst10|BUSMUX:inst4"
@@ -1009,18 +1010,19 @@ Info (12133): Instantiated megafunction "top:inst10|BUSMUX:inst4" with the follo
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "top:inst10|BUSMUX:inst4|lpm_mux:$00000" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12131): Elaborated megafunction instantiation "top:inst10|BUSMUX:inst4|lpm_mux:$00000", which is child of megafunction instantiation "top:inst10|BUSMUX:inst4" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_8rc.tdf
-    Info (12023): Found entity 1: mux_8rc File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/mux_8rc.tdf Line: 23
+    Info (12023): Found entity 1: mux_8rc File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/mux_8rc.tdf Line: 23
 Info (12128): Elaborating entity "mux_8rc" for hierarchy "top:inst10|BUSMUX:inst4|lpm_mux:$00000|mux_8rc:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "LPM_DFF" for hierarchy "top:inst10|LPM_DFF:OUTPUT"
 Info (12130): Elaborated megafunction instantiation "top:inst10|LPM_DFF:OUTPUT"
 Info (12133): Instantiated megafunction "top:inst10|LPM_DFF:OUTPUT" with the following parameter:
     Info (12134): Parameter "LPM_WIDTH" = "16"
 Info (12128): Elaborating entity "DataRAM" for hierarchy "DataRAM:inst"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "DataRAM:inst|altsyncram:altsyncram_component" File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/DataRAM.v Line: 86
-Info (12130): Elaborated megafunction instantiation "DataRAM:inst|altsyncram:altsyncram_component" File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/DataRAM.v Line: 86
-Info (12133): Instantiated megafunction "DataRAM:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/DataRAM.v Line: 86
+Info (12128): Elaborating entity "altsyncram" for hierarchy "DataRAM:inst|altsyncram:altsyncram_component" File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/DataRAM.v Line: 86
+Info (12130): Elaborated megafunction instantiation "DataRAM:inst|altsyncram:altsyncram_component" File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/DataRAM.v Line: 86
+Info (12133): Instantiated megafunction "DataRAM:inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/DataRAM.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "pseudo-random_integers_setup.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone IV GX"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
@@ -1033,9 +1035,9 @@ Info (12133): Instantiated megafunction "DataRAM:inst|altsyncram:altsyncram_comp
     Info (12134): Parameter "widthad_a" = "11"
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_h9g1.tdf
-    Info (12023): Found entity 1: altsyncram_h9g1 File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_h9g1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_h9g1" for hierarchy "DataRAM:inst|altsyncram:altsyncram_component|altsyncram_h9g1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tjk1.tdf
+    Info (12023): Found entity 1: altsyncram_tjk1 File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_tjk1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_tjk1" for hierarchy "DataRAM:inst|altsyncram:altsyncram_component|altsyncram_tjk1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "BUSMUX" for hierarchy "BUSMUX:inst6"
 Info (12130): Elaborated megafunction instantiation "BUSMUX:inst6"
 Info (12133): Instantiated megafunction "BUSMUX:inst6" with the following parameter:
@@ -1043,15 +1045,15 @@ Info (12133): Instantiated megafunction "BUSMUX:inst6" with the following parame
 Info (12128): Elaborating entity "lpm_mux" for hierarchy "BUSMUX:inst6|lpm_mux:$00000" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12131): Elaborated megafunction instantiation "BUSMUX:inst6|lpm_mux:$00000", which is child of megafunction instantiation "BUSMUX:inst6" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/busmux.tdf Line: 44
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_osc.tdf
-    Info (12023): Found entity 1: mux_osc File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/mux_osc.tdf Line: 23
+    Info (12023): Found entity 1: mux_osc File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/mux_osc.tdf Line: 23
 Info (12128): Elaborating entity "mux_osc" for hierarchy "BUSMUX:inst6|lpm_mux:$00000|mux_osc:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_mux.tdf Line: 87
 Info (12128): Elaborating entity "RAMinstr" for hierarchy "RAMinstr:inst2"
-Info (12128): Elaborating entity "altsyncram" for hierarchy "RAMinstr:inst2|altsyncram:altsyncram_component" File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/RAMinstr.v Line: 86
-Info (12130): Elaborated megafunction instantiation "RAMinstr:inst2|altsyncram:altsyncram_component" File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/RAMinstr.v Line: 86
-Info (12133): Instantiated megafunction "RAMinstr:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/RAMinstr.v Line: 86
+Info (12128): Elaborating entity "altsyncram" for hierarchy "RAMinstr:inst2|altsyncram:altsyncram_component" File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/RAMinstr.v Line: 86
+Info (12130): Elaborated megafunction instantiation "RAMinstr:inst2|altsyncram:altsyncram_component" File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/RAMinstr.v Line: 86
+Info (12133): Instantiated megafunction "RAMinstr:inst2|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/RAMinstr.v Line: 86
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "fibonacci.mif"
+    Info (12134): Parameter "init_file" = "pseudo-random_integers.mif"
     Info (12134): Parameter "intended_device_family" = "Cyclone V"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
@@ -1064,22 +1066,22 @@ Info (12133): Instantiated megafunction "RAMinstr:inst2|altsyncram:altsyncram_co
     Info (12134): Parameter "widthad_a" = "11"
     Info (12134): Parameter "width_a" = "16"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dki1.tdf
-    Info (12023): Found entity 1: altsyncram_dki1 File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_dki1" for hierarchy "RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_dvj1.tdf
+    Info (12023): Found entity 1: altsyncram_dvj1 File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_dvj1" for hierarchy "RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (12128): Elaborating entity "pplplus" for hierarchy "pplplus:inst5"
-Warning (10230): Verilog HDL assignment warning at pplsplus.v(8): truncated value with size 32 to match size of target (11) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/pplsplus.v Line: 8
+Warning (10230): Verilog HDL assignment warning at pplsplus.v(8): truncated value with size 32 to match size of target (11) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/pplsplus.v Line: 8
 Info (12128): Elaborating entity "LPM_COUNTER" for hierarchy "LPM_COUNTER:PC"
 Info (12130): Elaborated megafunction instantiation "LPM_COUNTER:PC"
 Info (12133): Instantiated megafunction "LPM_COUNTER:PC" with the following parameter:
     Info (12134): Parameter "LPM_DIRECTION" = "UP"
     Info (12134): Parameter "LPM_WIDTH" = "11"
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_sej.tdf
-    Info (12023): Found entity 1: cntr_sej File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/cntr_sej.tdf Line: 26
+    Info (12023): Found entity 1: cntr_sej File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/cntr_sej.tdf Line: 26
 Info (12128): Elaborating entity "cntr_sej" for hierarchy "LPM_COUNTER:PC|cntr_sej:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_counter.tdf Line: 259
 Info (12128): Elaborating entity "sxtn2lvn" for hierarchy "sxtn2lvn:inst8"
 Info (12128): Elaborating entity "plsone" for hierarchy "plsone:inst19"
-Warning (10230): Verilog HDL assignment warning at plsone.v(7): truncated value with size 32 to match size of target (16) File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/plsone.v Line: 7
+Warning (10230): Verilog HDL assignment warning at plsone.v(7): truncated value with size 32 to match size of target (16) File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/plsone.v Line: 7
 Info (12128): Elaborating entity "lvn2sxtn" for hierarchy "lvn2sxtn:inst17"
 Info (12128): Elaborating entity "LPM_ADD_SUB" for hierarchy "LPM_ADD_SUB:inst9"
 Info (12130): Elaborated megafunction instantiation "LPM_ADD_SUB:inst9"
@@ -1087,42 +1089,42 @@ Info (12133): Instantiated megafunction "LPM_ADD_SUB:inst9" with the following p
     Info (12134): Parameter "LPM_DIRECTION" = "ADD"
     Info (12134): Parameter "LPM_WIDTH" = "16"
 Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_1bc.tdf
-    Info (12023): Found entity 1: add_sub_1bc File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/add_sub_1bc.tdf Line: 23
+    Info (12023): Found entity 1: add_sub_1bc File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/add_sub_1bc.tdf Line: 23
 Info (12128): Elaborating entity "add_sub_1bc" for hierarchy "LPM_ADD_SUB:inst9|add_sub_1bc:auto_generated" File: c:/intelfpga_lite/19.1/quartus/libraries/megafunctions/lpm_add_sub.tdf Line: 119
-Warning (13012): Latch top:inst10|alu:inst6|alusum[4] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[3] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[13] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[1] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[11] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[0] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[11] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[2] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[15] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[14] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[12] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[11] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[10] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[9] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[8] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[7] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[6] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[5] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[10] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
-Warning (13012): Latch top:inst10|alu:inst6|alusum[16] has unsafe behavior File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/alu.v Line: 67
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dki1:auto_generated|q_a[11] File: C:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/db/altsyncram_dki1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[4] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[3] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[13] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[1] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[11] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[0] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[11] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[2] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[15] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[14] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[12] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[11] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[10] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[9] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[8] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[7] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[6] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[5] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[10] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
+Warning (13012): Latch top:inst10|alu:inst6|alusum[16] has unsafe behavior File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/alu.v Line: 65
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal RAMinstr:inst2|altsyncram:altsyncram_component|altsyncram_dvj1:auto_generated|q_a[11] File: C:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/db/altsyncram_dvj1.tdf Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1132,9 +1134,9 @@ Info (21057): Implemented 1047 device resources after synthesis - the final reso
     Info (21061): Implemented 869 logic cells
     Info (21064): Implemented 32 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 69 warnings
-    Info: Peak virtual memory: 4790 megabytes
-    Info: Processing ended: Thu Jun 11 17:08:55 2020
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:21
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Mon Jun 15 01:02:10 2020
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:46
 
 

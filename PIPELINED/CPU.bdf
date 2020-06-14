@@ -1193,9 +1193,9 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 24 184 240 312)
-	(text "RAMinstr" (rect 66 0 129 16)(font "Arial" (font_size 10)))
-	(text "inst2" (rect 8 112 31 124)(font "Arial" ))
+	(rect 1672 200 1888 328)
+	(text "DataRAM" (rect 63 0 129 16)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 112 25 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -1277,9 +1277,9 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 1672 200 1888 328)
-	(text "DataRAM" (rect 63 0 129 16)(font "Arial" (font_size 10)))
-	(text "inst" (rect 8 112 25 124)(font "Arial" ))
+	(rect 24 184 240 312)
+	(text "RAMinstr" (rect 66 0 129 16)(font "Arial" (font_size 10)))
+	(text "inst2" (rect 8 112 31 124)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)

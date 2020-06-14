@@ -7,15 +7,15 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/simulation/qsim
+dC:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/simulation/qsim
 vCPU
-!s110 1591894523
+!s110 1592148426
 !i10b 1
-!s100 A]0Vc[?02?bg>;0XSkz^[2
-I[;goQ4<OX`baTbB2B`T810
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1591894522
+!s100 gl1KIPSONi`X2i]`iA4]21
+I`gLkIDX]16nfZ6J:9G<^<0
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/NON-PIPELINED/simulation/qsim
+w1592148425
 8CPU.vo
 FCPU.vo
 L0 32
@@ -23,7 +23,7 @@ Z2 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z3 !s108 1591894523.000000
+Z3 !s108 1592148426.000000
 !s107 CPU.vo|
 !s90 -work|work|CPU.vo|
 !i113 1
@@ -31,23 +31,23 @@ Z4 o-work work
 Z5 tCvgOpt 0
 n@c@p@u
 vCPU_vlg_vec_tst
-!s110 1591894524
+!s110 1592148427
 !i10b 1
-!s100 gWI>oMLVDL9D`N0eGHKiE1
-I2g7HO[HLXG:2K41a9n[@U1
-R1
+!s100 Je1VLBWmXc08IAHVZaa9a3
+I@7dn<N_idaXd=YU>giPL<1
 R0
-w1591894520
-8Waveform1.vwf.vt
-FWaveform1.vwf.vt
+R1
+w1592148424
+8Waveform3.vwf.vt
+FWaveform3.vwf.vt
 L0 30
 R2
 r1
 !s85 0
 31
 R3
-!s107 Waveform1.vwf.vt|
-!s90 -work|work|Waveform1.vwf.vt|
+!s107 Waveform3.vwf.vt|
+!s90 -work|work|Waveform3.vwf.vt|
 !i113 1
 R4
 R5

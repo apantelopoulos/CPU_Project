@@ -1,12 +1,12 @@
-Power Analyzer Status : Successful - Thu Jun 04 15:33:00 2020
+Power Analyzer Status : Successful - Mon Jun 15 00:52:11 2020
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : CPU
 Top-level Entity Name : CPU
-Family : Cyclone IV GX
-Device : EP4CGX30CF23C6
+Family : Cyclone IV E
+Device : EP4CE6F17C6
 Power Models : Final
-Total Thermal Power Dissipation : 219.90 mW
-Core Dynamic Thermal Power Dissipation : 18.34 mW
-Core Static Thermal Power Dissipation : 118.22 mW
-I/O Thermal Power Dissipation : 83.34 mW
+Total Thermal Power Dissipation : 141.55 mW
+Core Dynamic Thermal Power Dissipation : 12.90 mW
+Core Static Thermal Power Dissipation : 43.03 mW
+I/O Thermal Power Dissipation : 85.62 mW
 Power Estimation Confidence : Low: user provided insufficient toggle rate data

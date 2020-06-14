@@ -9,90 +9,90 @@ z2
 cModel Technology
 dC:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/simulation/qsim
 vCPU
-Z0 !s110 1591832590
+!s110 1592172154
 !i10b 1
 !s100 1R?cT_Vb<6`FGG9aW<^`c2
 IK6cC^ih16OmYVi@lCK3;R3
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 dC:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/simulation/qsim
-w1591832589
-Z3 8CPU.vo
-Z4 FCPU.vo
-Z5 L0 32
-Z6 OV;L;10.5b;63
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/apant/OneDrive - Imperial College London/ELEC40006 - Electronics Design Project 1 2019-2020/CPU_Project/PIPELINED/simulation/qsim
+w1592172153
+Z2 8CPU.vo
+Z3 FCPU.vo
+Z4 L0 32
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1591832590.000000
-Z8 !s107 CPU.vo|
-Z9 !s90 -work|work|CPU.vo|
+!s108 1592172154.000000
+Z6 !s107 CPU.vo|
+Z7 !s90 -work|work|CPU.vo|
 !i113 1
-Z10 o-work work
-Z11 tCvgOpt 0
+Z8 o-work work
+Z9 tCvgOpt 0
 n@c@p@u
 vCPU_vlg_vec_tst
-R0
+!s110 1592172155
 !i10b 1
-!s100 DCneNz>HzO?YN7XBA4;Hm1
-I[A5lecz:`H3@kd[Tab^f`1
+!s100 EJfG;BeAnHMSFPm]XY@m=0
+I1UU`H11mnZO`<SY>XEO4M0
+R0
 R1
-R2
-w1591832588
-8Waveform2.vwf.vt
-FWaveform2.vwf.vt
-Z12 L0 30
-R6
+w1592172152
+8Waveform4.vwf.vt
+FWaveform4.vwf.vt
+Z10 L0 30
+R5
 r1
 !s85 0
 31
-R7
-!s107 Waveform2.vwf.vt|
-!s90 -work|work|Waveform2.vwf.vt|
+!s108 1592172155.000000
+!s107 Waveform4.vwf.vt|
+!s90 -work|work|Waveform4.vwf.vt|
 !i113 1
-R10
-R11
+R8
+R9
 n@c@p@u_vlg_vec_tst
 vStateMachine
-Z13 !s110 1591810743
+Z11 !s110 1591810743
 !i10b 1
 !s100 FXG@Wa0O1]8nH14P3XkkW2
 I<9haP9c;0i;ElhSG2T3cY2
-R1
-R2
+R0
+Z12 dC:/Users/apant/Desktop/DECA FILES/Project Pipeline Try 1/simulation/qsim
 w1591810742
+R2
 R3
 R4
 R5
-R6
 r1
 !s85 0
 31
-Z14 !s108 1591810743.000000
+Z13 !s108 1591810743.000000
+R6
+R7
+!i113 1
 R8
 R9
-!i113 1
-R10
-R11
 n@state@machine
 vStateMachine_vlg_vec_tst
-R13
+R11
 !i10b 1
 !s100 QE=ilQd3V^lR2lDja2C6L1
 I@nbdQ8LOnHBGR29RiDB_@0
-R1
-R2
+R0
+R12
 w1591810741
 8Waveform1.vwf.vt
 FWaveform1.vwf.vt
-R12
-R6
+R10
+R5
 r1
 !s85 0
 31
-R14
+R13
 !s107 Waveform1.vwf.vt|
 !s90 -work|work|Waveform1.vwf.vt|
 !i113 1
-R10
-R11
+R8
+R9
 n@state@machine_vlg_vec_tst
